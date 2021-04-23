@@ -1,26 +1,36 @@
+/*
+    Faça um programa para receber uma relação de números inteiros definida 
+    pelo usuário.Verifique a quantidade de números pares e ímpares informados
+    pelo usuário.
+*/
+
 #include<stdio.h>
-int main(void)
-{
-	int qtd, valp;
-	float val, desc, total;
-	
-	printf("\nInforme quantidade de pneus que voce deseja\n");
-	scanf("%i", &qtd);
-	printf("\nInforme o valor do pneu\n");
-	scanf("%f",&val);
-	printf ("\nInforme o percentual de desconto\n");
-	scanf("%f",&desc);
-	printf("\nInforme a quantidade de parcelas\n");
-	scanf("%i",&valp);
-	
-	total=((val*qtd)*(1-desc/100))/valp;
-	
-	printf("Voce comprou %i pneus no valor de %.2f \n", qtd, val);
-	printf("O seu desconto foi de %.2f \n", desc);
-	printf("Voce pagara %i parcelas de %.2f \n", valp, total);
-	
-   
-     
+#include<stdlib.h>
+
+bool isPar(int num){
+    if(num%2==1) return false;
+    return true;
+}
+
+int main () {
+    int num, *pN, quant, par = 0, impar = 0;
+    printf("Digite a quantidade de numeros: ");
+    scanf("%d", quant);
+
+    pN = (int *)malloc(quant*sizeof(int));
+
+    if (!pN){
+        printf ("** Erro: Memoria Insuficiente **");
+        exit(0);
+    }
+    for(int i=0; i<quant; i++){
+        printf("Digite um numero: ");
+        scanf("%d", &pN[i]);
+        isPar(*(pN + i)) ? par++ : impar++;
+    }
+
+    printf("Total: %d pares e %d impares", par, impar);
+
+    system("pause");
     return 0;
-	
 }
