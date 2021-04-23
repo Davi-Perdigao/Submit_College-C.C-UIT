@@ -1,4 +1,3 @@
-# Submit_College-C.C-UIT
 ## UNIVERSIDADE DE ITAÚNA (UIT)
  
 ## Primeiro Periodo
