@@ -1,5 +1,5 @@
 # Submit_College-C.C-UIT
-+# Universiade de Itaúna
+## UNIVERSIDADE DE ITAÚNA (UIT)
  
 ## Primeiro Periodo
 
