@@ -1,1 +1,54 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
+int main(int argc, char *argv[])
+{
+	//Imprimir
+	/*
+	for(int i=0;i<argc;i++){
+		printf("%s\n",argv[i]);
+	}*/
+	char texto[20][1024];
+	//Criar arquivo
+	if(strcmp(argv[2],"arquivo.txt")==0)
+	{
+		FILE *arquivo=fopen("arquivo.txt","r");
+		printf("Arquivo selecionado: arquivo.txt\n");
+
+	} else
+		{
+			printf("Não foi selecionado nenhum arquivo.\n");
+		}
+	//Selecionar opção
+	if(strcmp(argv[1],"seq")==0){
+		printf("Escolheu pesquisa Sequencial.\n");
+		//pesquisaSequencial();
+	} else if(strcmp(argv[1],"binaria")==0){
+		printf("Escolheu pesquisa binaria");
+		//pesquisaBinaria();
+	} else if(strcmp(argv[1],"arvore")==0){
+		printf("Escolheu arvore binaria");
+		//arvoreBinaria();
+	} else if(strcmp(argv[1],"hash")==0){
+		printf("Escolheu Hash");
+		//tabelaHash();
+	}
+	printf("\n\n");
+	system("pause");
+	return 0;
+}
+/*
+void pesquisaSequencial(FILE *arquivo){
+    int resp = false;
+    int count = 0;
+    for(int i=0; i<TAM; i++){
+        count++;
+        if(vetor[i] == chave){
+            resp = true;
+            i = TAM;
+        }
+    }
+    printf("(count %i)\n", count);
+    return resp;
+}*/
