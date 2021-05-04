@@ -52,3 +52,4 @@ void pesquisaSequencial(FILE *arquivo){
     printf("(count %i)\n", count);
     return resp;
 }*/
+
