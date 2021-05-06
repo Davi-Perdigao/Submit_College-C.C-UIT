@@ -20,6 +20,6 @@
 
 - [AEDS III](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AEDS%20III)
 - [Lab. Arquitetura e Organização de Computadores II](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Lab.%20AOC%20II)
-- [Cálculo Numérico](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Cal.%20Num%C3%A9rico)
+- [Matemática Discreta](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Cal.%20Num%C3%A9rico)
 - [Arquitetura e Organização de Computadores II](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AOC%20II)
 - [Ética, Sociedade e Informática](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Etica%20Soc.%20e%20Inform%C3%A1tica)
