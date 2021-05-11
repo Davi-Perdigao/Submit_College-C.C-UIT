@@ -3,37 +3,55 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
+
 
 typedef struct controle{
-	char texto[1024];
+	char palavra[20];
 	int contador;
-} arquivo;
+} Registro;
 
+int pesquisaSequencial(char chave[], Registro vetor[], int n);
 
 int main(int argc, char *argv[])
 {
-	arquivo *pArquivo, file;
-	char *armazenarTexto;
-	//pArquivo=vetArquivo;
-	
+	char linha[20];
+	int n=1024;
+	Registro vetor[n];
 	if(strcmp(argv[2],"arquivo.txt")==0)
 	{
-		FILE *arquivo=fopen("arquivo.txt","r");
-		printf("Arquivo selecionado: arquivo.txt\n");
-		//Armazenar o texto do arquivo na struct
-		
-		while(fgets(file.texto,1024,arquivo)!=NULL)
+		FILE *fp = fopen("arquivo.txt", "atr");
+	    if(fp != NULL)
 		{
-			//printf("%s",file.texto);
-			printf("\n\n");	
-		}
-		//Criar substrings para comparação
-		armazenarTexto=strtok(file.texto,",");
-		while(armazenarTexto!=NULL)
-		{
-			printf("%s\n",armazenarTexto);
-			armazenarTexto=strtok(NULL,",");
-		}
+	        while(!feof(fp))
+			{
+	            fgets(linha, 20, fp);
+	            linha[strcspn(linha, "\n\r")] = '\0';
+	            if(strlen(linha) > 0)
+				{
+	                char *aux = strtok(linha, " ");
+	                while(aux != NULL)
+					{
+	                    //Executa a pesquisa da palavra
+	                    int pos = pesquisaSequencial(aux, vetor, n);
+	                    if(pos >= 0)
+						{ //Palavra existe no vetor
+	                        vetor[pos].contador++;
+	                    } else 
+							{//Inserir palara novo vetor
+		                        strcpy(vetor[n].palavra, aux);
+		                        vetor[n].contador = 1;
+		                        n++;
+	                    	}
+	                    aux = strtok(NULL, " ");
+	                }
+	            }
+
+        	}
+        	
+        }
+        fclose(fp);
+		printf("\n%d\n",vetor[0].contador);
 	} else
 		{
 			printf("Não foi selecionado nenhum arquivo.\n");
@@ -59,4 +77,17 @@ int main(int argc, char *argv[])
 	printf("\n\n");
 	system("pause");
 	return 0;
+}
+
+int pesquisaSequencial(char chave[], Registro vetor[], int n)
+{
+    int resp = -1;
+    for(int i = 0; i < n; i++)
+	{
+        if(strcasecmp(vetor[i].palavra, chave) == 0){
+            resp = i; //guarda posiÃ§Ã£o do vetor
+            i = n;
+        }
+    }
+    return resp;
 }
