@@ -91,4 +91,4 @@ int pesquisaSequencial(char chave[], Registro vetor[], int n)
     }
     return resp;
 }
-abcdefg
+abcdefgh
