@@ -1,15 +1,15 @@
-#include <stdio.h> //Questão 2 - Prova AEDS III
+#include <stdio.h> //Questï¿½o 2 - Prova AEDS III
 #include <stdlib.h>
 
-typedef struct no { // estrututa nó
+typedef struct no { // estrututa nï¿½
     int conteudo;
     struct no *esquerda, *direita;
 } No;
 
-typedef struct { // estrutura da árvore 
+typedef struct { // estrutura da ï¿½rvore 
     No *raiz;
     int tam;
-} ArvB; //ponteiro para o nó
+} ArvB; //ponteiro para o nï¿½
 
 No* inserir(No *raiz, int valor) { //inserindo valores na arvore
     if(raiz == NULL) {
@@ -69,7 +69,7 @@ int main() {
         case 1:
             printf("\nInsira um valor: ");
             scanf("%d", &valor);
-            raiz = inserir(raiz, valor);// não precisa da ArvB
+            raiz = inserir(raiz, valor);// nao precisa da ArvB
             							//inserir(&arv, valor)
             break;
         case 2:
