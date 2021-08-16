@@ -8,9 +8,9 @@ public class Caneta {
     boolean apreço;
 
     public void informarDados(){
-        System.out.prinln("Marca: " + this.marca);
-        System.out.prinln("Cor: " + this.cor);
-        System.out.prinln("Preço: " + this.preço);
+        System.out.println("Marca: " + this.marca);
+        System.out.println("Cor: " + this.cor);
+        System.out.println("Preço: " + this.preço);
     }
 
     public void entrarMarca(String marca){
