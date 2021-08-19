@@ -1,57 +1,43 @@
-package caneta01;
-
 public class Main {
     public static void main(String[] args) {
-        var c1 = new Caneta("Bic", "Vermelha");
+        var c1 = new Caneta("Compactor", "Preta");
         c1.printCaneta();
         /*
-         * Marca: Bic 
-         * Cor: Vermelha 
-         * Tem tinta: Sim 
-         * Uso: 0
+         * Marca: Compactor 
+         * Cor: Preta 
+         * Preço: 9 
+         * Alterar Preço: 0
         */
 
         Caneta c2 = new Caneta();
         c2.setMarca("Bic");
-        c2.setCor("Azul");
+        c2.setCor("Preta");
         c2.printCaneta();
         /*
          * Marca: Bic 
-         * Cor: Azul 
-         * Tem tinta: Sim 
-         * Uso: 0
+         * Cor: Preta 
+         * Preço: 7 
+         * Alterar Preço: 0
         */
 
-        c2.usar();
-        c2.usar();
-        c2.usar();
+        c2.altpreço();
+        c2.altpreço();
         c2.printCaneta();
         /*
          * Marca: Bic 
-         * Cor: Azul 
-         * Tem tinta: Sim 
-         * Uso: 3
+         * Cor: Preta 
+         * Preço: 7 
+         * Alterar Preço: 2
         */
 
-        c2.usar();
-        c2.usar();
-        // Chegamos no uso 5, logo a tinta acaba.
-        c2.printCaneta();
-        /*
-         * Marca: Bic 
-         * Cor: Azul 
-         * Tem tinta: Não 
-         * Uso: 5
-        */
+        c2.altpreço();   // 3 alterações de preço (máximo permitido)
 
-        c2.porTinta();
         c2.printCaneta();
         /*
          * Marca: Bic 
-         * Cor: Azul 
-         * Tem tinta: Sim 
-         * Uso: 0
+         * Cor: Preta 
+         * Preço: Não 
+         * Alterar Preço: 10
         */
     }
-}
 }

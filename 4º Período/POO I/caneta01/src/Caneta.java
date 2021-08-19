@@ -11,6 +11,13 @@ public class Caneta {
         return altpreço;
     }
 
+    public void newpreço(){
+        uso++;
+        if (uso == 3) {
+            altpreço = false;
+        }
+    }
+
     public void zerarpreço() {
         uso = 0;
     }
