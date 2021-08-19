@@ -24,12 +24,12 @@
 - [Arquitetura e Organização de Computadores II](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AOC%20II)
 - [Ética, Sociedade e Informática](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Etica%20Soc.%20e%20Inform%C3%A1tica)
 
-## Terceiro Período
+## Quarto Período
 
-- [Algorítmos em Grafos](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AEDS%20III)
-- [Lab. Desenvolv. de Dispositivos Móveis](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Lab.%20AOC%20II)
-- [POO I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Mat.%20Discreta)
-- [Arquitetura e Organização de Computadores III](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AOC%20II)
-- [Banco de Dados I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Etica%20Soc.%20e%20Inform%C3%A1tica)
-- [Engenharia de Software I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Etica%20Soc.%20e%20Inform%C3%A1tica)
+- [Algorítmos em Grafos](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Algoritmos%20em%20Grafos)
+- [Lab. Desenvolv. de Dispositivos Móveis](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Lab.%20Dipositivos%20M%C3%B3veis)
+- [POO I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/POO)
+- [Arquitetura e Organização de Computadores III](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/AOC%20III)
+- [Banco de Dados I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Banco%20de%20Dados)
+- [Engenharia de Software I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Engenharia%20Software%20I)
 
