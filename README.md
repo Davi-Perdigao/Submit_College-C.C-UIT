@@ -23,3 +23,13 @@
 - [Matemática Discreta](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Mat.%20Discreta)
 - [Arquitetura e Organização de Computadores II](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AOC%20II)
 - [Ética, Sociedade e Informática](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Etica%20Soc.%20e%20Inform%C3%A1tica)
+
+## Terceiro Período
+
+- [Algorítmos em Grafos](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AEDS%20III)
+- [Lab. Desenvolv. de Dispositivos Móveis](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Lab.%20AOC%20II)
+- [POO I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Mat.%20Discreta)
+- [Arquitetura e Organização de Computadores III](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/AOC%20II)
+- [Banco de Dados I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Etica%20Soc.%20e%20Inform%C3%A1tica)
+- [Engenharia de Software I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/3%C2%B0%20Per%C3%ADodo/Etica%20Soc.%20e%20Inform%C3%A1tica)
+
