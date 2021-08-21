@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        var c1 = new Caneta("Compactor", "Preta");
+        Caneta c1 = new Caneta("Compactor", "Preta");
         c1.printCaneta();
         /*
          * Marca: Compactor 

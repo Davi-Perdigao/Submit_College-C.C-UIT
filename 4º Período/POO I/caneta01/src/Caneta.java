@@ -1,25 +1,31 @@
 import java.nio.FloatBuffer;
 
+package pkgcaneta01;
+
 public class Caneta {
     
     private String marca;
     private String cor;
     private Float preço; 
-    private Boolean altpreço;
+    private Float altpreço;
 
-    public boolean altpreço() {
+    String cor () {
+        return ("Estou escrevendo de "+cor);
+    }
+
+    public Float altpreço() {
         return altpreço;
     }
 
-    public void newpreço(){
-        uso++;
-        if (uso == 3) {
-            altpreço = false;
-        }
+    public void zerarpreço() {
+        preço = altpreço;
     }
 
-    public void zerarpreço() {
-        uso = 0;
+    public void newpreço(){
+        altpreço++;
+        if (altpreço() == 3) {
+            altpreço = false;
+        }
     }
 
     public String getmarca() {
@@ -44,7 +50,7 @@ public class Caneta {
             + "\nmarca: " + marca
             + "\ncor: " + cor
             + "\npreço: " + preço
-            + "\naltpreço: " + (altpreço() ? "Sim" : "Não")
+            + "\naltpreço: " + altpreço
         );
     }
 
