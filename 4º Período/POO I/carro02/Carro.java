@@ -10,6 +10,14 @@ public class Carro {
         return ligado;
     }
 
+    public double getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(double velocidade) {
+        this.velocidade = velocidade;
+    }
+
     public void ligar(double combustivel){
         if(combustivel>0)
         ligado=true;
@@ -36,7 +44,7 @@ public class Carro {
     //escrever a velocidade
     public void setvelocidade(double valor){
         if(valor>0 && valor<=250)
-        velocidade = valor;
+        setVelocidade(valor);
     }
 
     String andar(){
@@ -66,7 +74,7 @@ public class Carro {
     }
 
     public Carro(double velocidade, int capacidadeTanque, boolean ligado, double combustivel) {
-        this.velocidade = velocidade;
+        this.setVelocidade(velocidade);
         this.capacidadeTanque = capacidadeTanque;
         this.ligado = ligado;
         this.combustivel = combustivel;
