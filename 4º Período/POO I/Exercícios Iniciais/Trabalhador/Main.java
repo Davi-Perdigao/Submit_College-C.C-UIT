@@ -1,22 +1,21 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String args[])
-    {
+    public static void main(String args[]){
         Scanner entrada = new Scanner(System.in);
-        Trabalhador pedreiro = new Trabalhador();
+        Trabalhador professor = new Trabalhador();
 
-        System.out.println("Informe a matrícula: ");
-        pedreiro.setMatricula(entrada.nextInt());
+        System.out.println("Matrícula: ");
+        professor.setMatricula(entrada.next());
         clearBuffer(entrada);
         
-        System.out.println("Informe o nome: ");
-        pedreiro.setNome(entrada.nextLine());
+        System.out.println("Nome: ");
+        professor.setNome(entrada.next());
 
-        System.out.println("Informe o salário: ");
-        pedreiro.setSalario(entrada.nextDouble());
+        System.out.println("Salário: ");
+        professor.setSalario(entrada.nextDouble());
 
-        System.out.println(pedreiro.imprimirDados());
+        System.out.println(professor.printDados());
 
     }
 

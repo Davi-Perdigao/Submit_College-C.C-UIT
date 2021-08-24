@@ -1,15 +1,23 @@
+/*
+ * Crie a classe Trabalhador com os atributos matrícula, nome e salário. Crie uma outra classe
+ * com o método main e peça ao usuário para cadastrar 3 trabalhadores. Lembre-se que ninguém
+ * pode ganhar menos que um salário mínimo. 
+ */
+
 public class Trabalhador
 {
-    private int matricula;
+    private String matricula;
     private String nome;
     private double salario;
 
-    public void setMatricula(int matricula)
+    private final Double salarioMinimo = 1147d;
+
+    public void setMatricula(String matricula)
     {
         this.matricula = matricula;
     }
 
-    public int getMatricula()
+    public String getMatricula()
     {
         return this.matricula;
     }
@@ -24,24 +32,32 @@ public class Trabalhador
         return this.nome;
     }
 
-    public void setSalario(double salario)
-    {
-        if(salario>=1100){
-            this.salario = salario;
-        } else{
-            this.salario = 1100;
+    public void setSalario(Double salario) {
+        if(salario >= salarioMinimo) {
+          this.salario = salario;
+        } else {
+          System.out.println("Trabalhador não deve receber menos que um salário mínimo.");
         }
-    }
+      }
 
     public double getSalario()
     {
         return this.salario;
     }
 
-    public String imprimirDados()
+    public String printDados()
     {
         return "\nMatricula: " + getMatricula() +
                 "\nNome: " + getNome() +
-                "\nSalário(R$): " + getSalario();
+                "\nSalário: R$ " + getSalario();
+    }
+
+    public Trabalhador(String matricula, String nome, Double salario) {
+        this.matricula = matricula;
+        this.nome = nome;
+        this.salario = salario;
+      }
+
+    public Trabalhador() {
     }
 }
