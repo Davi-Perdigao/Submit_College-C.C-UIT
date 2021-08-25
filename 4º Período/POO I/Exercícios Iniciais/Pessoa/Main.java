@@ -14,7 +14,7 @@ public class main {
         p2.setEndereco(input.nextLine());
         p2.setTelefone(input.nextLine());
 
-        System.out.println(pessoa1.imprimir());
-        System.out.println(pessoa2.imprimir());
+        System.out.println(p1.imprimir());
+        System.out.println(p2.imprimir());
     }
 }
