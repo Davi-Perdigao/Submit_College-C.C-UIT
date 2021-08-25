@@ -4,6 +4,53 @@
  * momento da instanciação dos objetos. Crie um método que retorne o valor líquido do boleto.
  * Crie também um método pagar que altera o boleto para pago.
 */
-public class Boleto {
+
+public class Boleto
+{
+    private String nomeCliente;
+    private String vencimento;
+    private double valor;
+    private double desconto;
+    private boolean boletoPago;
+
+    public Boleto(String nomeCliente, String vencimento, double valor, double desconto)
+    {
+        this.nomeCliente = nomeCliente;
+        this.vencimento = vencimento;
+        this.valor = valor;
+        this.desconto = desconto;
+        this.boletoPago = false;
+    }
+
+    public double calcularValLiquido()
+    {
+        return this.valor-this.desconto;
+    }
+
+    public void pagarBoleto()
+    {
+        this.boletoPago = true;
+    }
+
+    public String verificarPagamento()
+    {
+        if(this.boletoPago){
+            return "\nPagamento efetuado.";
+        } else{
+            return "\nPagamento pendente.";
+        }
+    }
+
+    public String imprimirDados()
+    {
+        return "\nNome: " + this.nomeCliente +
+                "\nVencimento do boleto: " + this.vencimento +
+                "\nValor do boleto: " + this.valor +
+                "\nValor do desconto: " + this.desconto +
+                "\nValor líquido: " + calcularValLiquido() +
+                verificarPagamento();
+                
+    }
+
 
 }
