@@ -7,15 +7,15 @@
 
 public class Boleto
 {
-    private String nomeCliente;
+    private String cliente;
     private String vencimento;
     private double valor;
     private double desconto;
     private boolean boletoPago;
 
-    public Boleto(String nomeCliente, String vencimento, double valor, double desconto)
+    public Boleto(String cliente, String vencimento, double valor, double desconto)
     {
-        this.nomeCliente = nomeCliente;
+        this.cliente = cliente;
         this.vencimento = vencimento;
         this.valor = valor;
         this.desconto = desconto;
@@ -43,7 +43,7 @@ public class Boleto
 
     public String imprimirDados()
     {
-        return "\nNome: " + this.nomeCliente +
+        return "\nNome: " + this.cliente +
                 "\nVencimento do boleto: " + this.vencimento +
                 "\nValor do boleto: " + this.valor +
                 "\nValor do desconto: " + this.desconto +
