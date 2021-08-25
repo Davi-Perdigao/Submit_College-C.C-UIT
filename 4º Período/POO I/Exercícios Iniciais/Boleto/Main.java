@@ -2,9 +2,9 @@ public class Main
 {
     public static void main(String args[])
     {
-        String vencimento = "31/12/2021";
+        String vencimento = "05/09/2021";
 
-        Boleto boleto = new Boleto("Edmilson Lino", vencimento, 1500.0 , 100.0);
+        Boleto boleto = new Boleto("Davi", vencimento, 1100.0 , 100.0);
         
         System.out.println(boleto.imprimirDados());
     }
