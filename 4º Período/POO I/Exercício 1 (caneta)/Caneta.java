@@ -1,7 +1,5 @@
 import java.nio.FloatBuffer;
 
-package pkgcaneta01;
-
 public class Caneta {
     
     private String marca;
