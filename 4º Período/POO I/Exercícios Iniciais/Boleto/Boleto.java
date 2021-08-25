@@ -24,12 +24,16 @@ public class Boleto
 
     public double calcularValLiquido()
     {
-        return this.valor-this.desconto;
+        if(this.valor >= this.desconto){
+            return this.valor-this.desconto;
+        } else{
+            return 0;
+        }
     }
 
     public void pagarBoleto()
     {
-        this.boletoPago = true;
+        this.boletoPago = true; //neste caso, boleto pago
     }
 
     public String verificarPagamento()
@@ -41,7 +45,7 @@ public class Boleto
         }
     }
 
-    public String imprimirDados()
+    public String imprimirInfos()
     {
         return "\nNome: " + this.cliente +
                 "\nVencimento do boleto: " + this.vencimento +

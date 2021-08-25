@@ -1,11 +1,27 @@
+import java.util.Scanner;
+
 public class Main
 {
     public static void main(String args[])
     {
-        String vencimento = "05/09/2021";
+        Scanner entrada = new Scanner(System.in);
+        String nome, vencimento = "01/09/2021";
+        double valorBoleto, valorDesconto;
 
-        Boleto boleto = new Boleto("Davi", vencimento, 1100.0 , 100.0);
-        
-        System.out.println(boleto.imprimirDados());
+        System.out.println("Nome:");
+        nome = entrada.nextLine();
+
+        System.out.println("Valor do boleto:");
+        valorBoleto = entrada.nextDouble();
+
+        System.out.println("Valor do desconto:");
+        valorDesconto = entrada.nextDouble();
+
+        Boleto boleto = new Boleto(nome, vencimento, valorBoleto, valorDesconto);
+
+        boleto.pagarBoleto();
+        System.out.println(boleto.imprimirInfos());
+
+        entrada.close();
     }
 }
