@@ -18,7 +18,7 @@ public class Main {
         
         System.out.println("---Apresentando os dados da Pessoa---");
         System.out.println(pessoa.imprimirDados());
-        System.out.println("Esta pessoa está "+pessoa.descricaoPeso());
+        System.out.println("Essa pessoa está "+pessoa.descricaoPeso());
         
     }
     
