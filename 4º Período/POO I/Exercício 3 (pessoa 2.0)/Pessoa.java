@@ -8,63 +8,65 @@ pessoas passando os valores por get e set.
 */
 
 public class Pessoa {
-
+    
     private String nome;
-    private String sexo;
-    private int peso;
-    private int altura;
-
+    private char sexo;
+    private double peso;
+    private double altura;
+    
+    public String getNome(){
+        return nome;
+    }
+    
     public void setNome(String nome){
         this.nome = nome;
     }
-    public void setsexo(String string){
-        this.sexo = string;
-    }
-    public void setpeso(int peso){
-        this.peso = peso;
-    }
 
-    public void setaltura(int altura){
-        this.altura = altura;
-    }
- 
-    public String getNome(){
-        return this.nome;
-    }
-
-    public String getsexo(){
+    public char getSexo() {
         return sexo;
     }
 
-    public int getpeso(){
-        return peso;
+    public void setSexo(char sexo) {
+        this.sexo = sexo;
     }
 
-    public int getaltura(){
+    public double getPeso() {
+        return peso;
+        
+    }
+
+    public void setPeso(double peso) {
+        if(peso>0 && peso<300)
+        this.peso = peso;
+    }
+
+    public double getAltura() {
         return altura;
     }
 
-    public String imprimir(){
-        return ("\nNome: "+getNome()+
-        "\nSexo: "+getsexo()+
-        "\nPeso: "+getpeso()+
-        "\nAltura: "+getaltura());
+    public void setAltura(double altura) {
+        if(altura>0 && altura<3)
+        this.altura = altura;
     }
     
-    public double calcularIMC(){
-
-        double imc = this.peso/(Math.pow(this.altura, 2));
-        return imc;
+    public double imc(){
+        return peso/(altura*altura);
     }
-
-    public String checarIMC(){
-
-        if(calcularIMC()<=18.5){
-            return "Abaixo do Peso.";
-        }else if (calcularIMC()>=18.5 && calcularIMC()<=24.9){
-            return "Peso Normal.";
-        }else {
-            return "Acima do Peso.";
+    
+    public String descricaoPeso(){
+        String desc;
+        if(imc()<= 18.5 ){
+            desc = "abaixo do peso";
+        }else if(imc()<= 24.9){
+            desc = "peso ideal";
+        }else{
+            desc = "acima do peso";
         }
+        return desc;
     }
+    
+    public String imprimirDados(){
+        return "O "+getNome()+" do sexo "+((getSexo()=='m')?"Masculino":"Feminino")+" e pesa "+getPeso()+"e mede "+getAltura();
+    }
+    
 }
