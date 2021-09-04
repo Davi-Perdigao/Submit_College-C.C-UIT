@@ -14,4 +14,80 @@ acelerar, frear, ligar, abastecer, etc....
 
 public class Carro {
 
+    private String placa;
+    private int velocidade;
+    private int velocidadeMax;
+    private double potMotor;
+    private int capacidadeTanque;
+    private boolean ligado;
+    private double combustivel;
+    
+    public Carro(){
+
+    }
+
+    public void setPlaca (String placa){
+        this.placa = placa;
+    }
+
+    public String getPlaca(){
+        return this.placa;
+    }
+
+    private void setPotenciaMotor (double potMotor){
+        this.potMotor = potMotor;
+    }
+
+    public double setPotenciaMotor(){
+        return this.potMotor;
+    }
+
+    public void abastecer (double combustivel){
+        this.combustivel = combustivel;
+    }
+
+    public boolean getligado() {
+        return ligado;
+    }
+
+    public double getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(int velocidade) {
+        this.velocidade = velocidade;
+    }
+
+    public void ligar(double combustivel){
+        if(combustivel>0)
+        ligado=true;
+    }
+    
+    public void desligar(double combustivel){
+        if(combustivel<0)
+        ligado=false;
+    }
+
+    public double getcombustivel() {
+        return combustivel;
+    }
+    
+    public void abastecer(){
+        combustivel = capacidadeTanque;
+    }
+
+    public void acelerar ()
+
+    if(this.combustivel>0 && this.ligado == true){
+
+        this.velocidade += 10;
+        this.combustivel --;
+        if (this.combustivel <= this.capacidadeTanque*0.1){
+            System.out.println("O carro está na reserva. Abasteça Imediatamente!");
+        }
+        if (this.velocidade > this.velocidadeMax){
+            this.velocidade = velocidadeMax;
+        }    
+    }
+
 }
