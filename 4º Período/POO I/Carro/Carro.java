@@ -14,24 +14,25 @@ acelerar, frear, ligar, abastecer, etc...
 
 public class Carro {
 
-    private String placa;
-    private int velocidade;
-    private int velocidadeMax;
+    private String modelo;
+    private double velocidade;
+    private double velocidadeMax;
     private double potMotor;
-    private int capacidadeTanque;
+    private double capacidadeTanque;
     private boolean ligado;
     private double combustivel;
+    private boolean reserva;
     
     public Carro(){
 
     }
 
-    public void setPlaca (String placa){
-        this.placa = placa;
+    public void setModelo (String modelo){
+        this.modelo = modelo;
     }
 
-    public String getPlaca(){
-        return this.placa;
+    public String getModelo(){
+        return this.modelo;
     }
 
     private void setPotenciaMotor (double potMotor){
@@ -54,7 +55,7 @@ public class Carro {
         return velocidade;
     }
 
-    public void setVelocidade(int velocidade) {
+    public void setVelocidade(double velocidade) {
         this.velocidade = velocidade;
     }
 
