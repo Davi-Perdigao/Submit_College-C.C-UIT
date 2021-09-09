@@ -20,7 +20,7 @@ public class Main {
     Celular modelX = new Celular(modelo, nivelBateria, nivelSom);
 
     do{
-        System.out.println("Selecione uma opção:"); /*O usuário pode carregar o celular, aumentar 
+        System.out.println("Menu:"); /*O usuário pode carregar o celular, aumentar 
                                                       e diminuir o som e jogar.
                                                     */  
         System.out.println("1 - Ligar");
@@ -65,7 +65,7 @@ public class Main {
                 System.out.println(modelX.diminuirVolume(som));
 
             case 0:
-                System.out.println("Sistema fechado");
+                System.out.println("Finalizando Menu...");
                 break;
 
             default:

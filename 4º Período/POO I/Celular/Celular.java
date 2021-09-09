@@ -58,9 +58,9 @@ public class Celular
   public String ligar() {
       if(this.nivelBateria > 0){
           this.ligado = true;
-          return "Celular ligado";
+          return "Celular ligado.";
       } else{
-          return "Não foi possível ligar, por favor, recarregue-o";
+          return "Sem bateria!";
       }
       
   }
