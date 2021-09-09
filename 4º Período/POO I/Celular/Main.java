@@ -2,66 +2,77 @@ package Celular;
 import java.util.Scanner;
 
 public class Main {
-  static Scanner s = new Scanner(System.in);
 
-  public static void main(String[] args) {
-    System.out.println("Modelo do Celular: ");
-    String modelo = s.nextLine();
+  public static void main(String[] args){
 
-    Celular celular = new Celular(modelo);
-    
-    menu(celular);
-  }
+    int nivelBateria, nivelSom, opcao, som;
+    String modelo;
 
-  public static void menu(Celular celular) {
-    int resposta = 1;
+    Scanner entrada = new Scanner(System.in);
 
-    do {
-      celular.printCelular();
+    System.out.println("Informe o modelo do celular:");
+    modelo = entrada.nextLine();
+    System.out.println("Informe o nível da bateria:");
+    nivelBateria = entrada.nextInt();
+    System.out.println("Informe o nível do som:");
+    nivelSom= entrada.nextInt();
 
-      System.out.println("\tMenu"
-        + "\n1 - Ligar celular" 
-        + "\n2 - Desligar celular" 
-        + "\n3 - Carregar" 
-        + "\n4 - Carregar completamente" 
-        + "\n5 - Aumentar volume" 
-        + "\n6 - Abaixar volume" 
-        + "\n7 - Jogar" 
-        + "\n0 - Sair do Menu" 
-        + "\n Resposta: "  
-      );
-      
-      resposta = s.nextInt();
-      
-      switch (resposta) {
-        case 1: 
-          celular.ligar();
-          break;
-        case 2:
-          celular.desligar();
-          break;
-        case 3:
-          celular.carregarBateria();
-          break;
-        case 4:
-          celular.carregarCompletamente();
-          break;
-        case 5:
-          celular.aumentarVolume();
-          break;
-        case 6:
-          celular.diminuirVolume();
-          break;
-        case 7:
-          celular.jogar();
-          break;
-        case 0:
-          System.out.println("Saindo...");
-          break;
-        default:
-          System.out.println("Opção errada");
-          break;
-      }
-    } while (resposta != 0);
-  }
+    Celular modelX = new Celular(modelo, nivelBateria, nivelSom);
+
+    do{
+        System.out.println("Selecione uma opção:"); /*O usuário pode carregar o celular, aumentar 
+                                                      e diminuir o som e jogar.
+                                                    */  
+        System.out.println("1 - Ligar");
+        System.out.println("2 - Carregar");
+        System.out.println("3 - Jogar");
+        System.out.println("4 - Aumentar som");
+        System.out.println("5 - Diminuir som");
+        System.out.println("0 - Sair");
+        
+        opcao = entrada.nextInt();
+
+        switch(opcao){
+            case 1:
+                System.out.println(modelX.ligar());
+                break;
+            case 2:
+                modelX.carregarBateria();
+                System.out.println("A bateria está em " + modelX.getNivelBateria() + "%");
+                break;
+            case 3:
+                if(modelX.getNivelBateria()>0 && modelX.isLigado()){
+                    int numero;
+                    System.out.println("O jogo é um Par OU Impar");   
+                    System.out.print("Escolha um número: ");
+                    numero = entrada.nextInt();
+
+                    System.out.println(modelX.jogar(numero));
+                    System.out.println(modelX.getNivelBateria());
+                } else{
+                    System.out.println("Não foi possível jogar.");
+                }
+                break;
+            case 4:
+                
+                System.out.println("Informe o nível de volume que deseja aumentar:");
+                som = entrada.nextInt();
+                System.out.println(modelX.aumentarVolume(som));
+                break;
+            case 5:
+                System.out.println("Informe o nível de volume que deseja diminuir:");
+                som = entrada.nextInt();
+                System.out.println(modelX.diminuirVolume(som));
+
+            case 0:
+                System.out.println("Sistema fechado");
+                break;
+
+            default:
+                System.out.println("Opção inválida!");
+                break;
+        }
+    } while (opcao != 0);
+    entrada.close();
+}
 }

@@ -15,126 +15,118 @@ package Celular;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Celular {
-    private String modelo;
-    private Double nivelBateria;
-    private Boolean ligado;
-    private Double nivelSom;
-  
-    private final Double gastoBateria = 10d;
-    private Scanner s = new Scanner(System.in);
-  
-  
-    private void setModelo(String modelo) {
-      this.modelo = modelo;
-    }
-  
-    public String getModelo() {
-      return modelo;
-    }
-  
-    public void ligar() {
-      if (nivelBateria <= 0) {
-        System.out.println("Sem bateria!");
-        return;
-      }
-      ligado = true;
-    }
-    
-    public void desligar() {
-      ligado = false;
-    }
-  
-    public boolean isLigado() {
-      return ligado;
-    }
-  
-    private void usarBateria() {
-      nivelBateria -= gastoBateria;
-      checarBateria();
-    }
-  
-    private void checarBateria() {
-      if (nivelBateria <= 0) {
-        ligado = false;
-        nivelSom = 0d;
-        nivelBateria = 0d;
-      }
-    }
-  
-    public void carregarBateria() {
-      nivelBateria += gastoBateria;
-    }
-  
-    public void carregarCompletamente() {
-      while (nivelBateria < 100) {
-        carregarBateria();
-      }
-    }
-  
-    public void aumentarVolume() {
-      if (!isLigado() || nivelSom >= 100) {
-        System.out.println("Sem bateria ou volume máximo");
-        return;
-      }
-      nivelSom += 5;
-    }
-  
-    public void diminuirVolume() {
-      if (!isLigado() || nivelSom <= 0) {
-        System.out.println("Sem bateria ou volume zerado");
-        return;
-      }
-  
-      nivelSom -= 5;
-    }
-  
-    public void jogar() {
-      if (!isLigado() || nivelBateria < gastoBateria) {
-        System.out.println("Sem bateria suficiente ou desligado!");
-        return;
-      }
-      short choice = 2;
-  
-      while (choice > 1 || choice < 0) {
-        System.out.println("\n\tJOGO \nEscolha [0 - Impar | 1 - Par]: ");
-        choice = s.nextShort();
-      }
-  
-      int num = getRandomNumber();
-   
-      System.out.println( 
-        (isPar(num) && choice == 1) || (!isPar(num) && choice == 0) 
-        ? "\n\tNumero: " + num + "\nParabéns você venceu! :D\n\n" 
-        : "\n\tNumero: " + num + "\nNão foi dessa vez :(\n\n"
-      );
-  
-      usarBateria();  
-    }
-  
-    private int getRandomNumber() {
-      Random r = new Random();
-      return r.nextInt(100);
-    }
-  
-    private boolean isPar(int num) {
-      return num%2 == 0;
-    }
-  
-    public void printCelular() {
-      System.out.println("\n\tFicha Técnica"
-        + "\nModelo: " + modelo
-        + "\nNível da bateria: " + nivelBateria + "%"
-        + "\nNivel do som: " + nivelSom + "%"
-        + "\nCelular " + (ligado ? "ligado" : "desligado")
-        + "\n"
-      );
-    }
-  
-    public Celular(String modelo) {
-      nivelBateria = 0d;
-      nivelSom = 100d;
-      desligar();
+public class Celular
+{
+  private String modelo;
+  private int nivelBateria;
+  private boolean ligado;
+  private int som;
+
+  public Celular(String modelo, int nivelBateria, int nivelSom){
       setModelo(modelo);
-    }  
+      setNivelBateria(nivelBateria);
+      setSom(nivelSom); 
   }
+
+  private void setModelo(String modelo){
+      this.modelo = modelo;
+  }
+
+  public String getModelo(){
+      return this.modelo;
+  }
+  public int getNivelBateria() {
+      return nivelBateria;
+  }
+
+  private void setNivelBateria(int nivelBateria) {
+      if(nivelBateria>0 && nivelBateria<=100){
+          this.nivelBateria = nivelBateria;
+      }
+  }
+
+  public void carregarBateria(){
+      if(this.nivelBateria<100){
+          this.nivelBateria++;
+      }
+  }
+
+  public boolean isLigado(){
+      return this.ligado;
+  }
+
+  public String ligar() {
+      if(this.nivelBateria > 0){
+          this.ligado = true;
+          return "Celular ligado";
+      } else{
+          return "Não foi possível ligar, por favor, recarregue-o";
+      }
+      
+  }
+  
+  private void setSom(int som){
+      this.som = som;
+  }
+
+  public int getSom() {
+      return som;
+  }
+
+  /*O usuário somente poderá controlar o 
+  som e jogar se o celular estiver ligado.
+  */
+  
+  public String aumentarVolume(int som) {
+      if(this.nivelBateria>0 && this.ligado == true){
+          if(som>0 && som<=100){
+              if((this.som+som)>100){
+                  this.som = 100;
+              } else{
+                  this.som += som;
+              } 
+          } else{
+              return "Valor inválido!";
+          }
+          return "Nivel de volume: " + getSom();
+      } else{
+          return "Volume máximo!";
+      }
+  }
+
+  public String diminuirVolume(int som){
+      if(this.nivelBateria>0 && this.ligado == true){
+          if(som>0 && som<=100){
+              if((this.som-som)<0){
+                  this.som = 0;
+              } else{
+                  this.som -= som;
+              } 
+          } else{
+              return "Valor inválido!";
+          }
+          return "Nivel de volume: " + getSom();
+      } else{
+          return "O volume está no mínimo!.";
+      } 
+  }
+
+  /*O jogo deverá ser um par ou impar onde o usuário escolher 
+  (par ou impar) e o sistema gera um número aleatorio e diz
+  se ganhou ou perdeu.
+  */
+
+  public String jogar(int num){
+      if(this.nivelBateria>0 && this.ligado == true){
+          Random numeroRandom = new Random();
+          this.nivelBateria--; //a bateria deverá gastar quando jogar
+          if(numeroRandom.nextInt(5) == num){
+              return "Você venceu :D !!!";
+          } else{
+              return "Ooops! Você perdeu...";
+          }
+      } else{
+          return "Não é possível jogar. Verifique o nível da bateria, ou se o telefone está ligado.";
+      }   
+  }
+}
