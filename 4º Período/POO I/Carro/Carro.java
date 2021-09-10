@@ -15,80 +15,164 @@ acelerar, frear, ligar, abastecer, etc...
 public class Carro {
 
     private String modelo;
-    private double velocidade;
-    private double velocidadeMax;
-    private double potMotor;
-    private double capacidadeTanque;
-    private boolean ligado;
-    private double combustivel;
-    private boolean reserva;
-    
-    public Carro(){
+    private Double capacidadeTanque;
+    private Double nivelTanque;
+    private Double potenciaMotor;
+    private Double velocidade;
+    private Double velocidadeMaxima;
+    private Boolean ligado;
+    private Boolean reserva;
 
+    /*Ao criar o carro é preciso informar no construtor o modelo, capacidade do 
+    tanque, velocidade máxima e potencia do motor(1.0, 1.4, 1.8, etc)
+    */
+
+    public Carro (String modelo, Double capacidadeTanque, Double velocidadeMaxima, Double potenciaMotor) { 
+        this();
+        setModelo(modelo);
+        setCapacidadeTanque(capacidadeTanque);
+        setPotenciaMotor(potenciaMotor);
+        setVelocidadeMaxima(velocidadeMaxima);
+      }
+  
+    public String getModelo() {
+      return modelo;
     }
-
-    public void setModelo (String modelo){
-        this.modelo = modelo;
+  
+    private void setModelo(String modelo) {
+      this.modelo = modelo;
     }
-
-    public String getModelo(){
-        return this.modelo;
+  
+    public Double getCapacidadeTanque() {
+      return capacidadeTanque;
     }
-
-    private void setPotenciaMotor (double potMotor){
-        this.potMotor = potMotor;
+  
+    private void setCapacidadeTanque(Double capacidadeTanque) {
+      if (capacidadeTanque > 0) {
+        this.capacidadeTanque = capacidadeTanque;
+      }
     }
-
-    public double setPotenciaMotor(){
-        return this.potMotor;
+  
+    public Double getNivelTanque() {
+      return nivelTanque;
     }
-
-    public void abastecer (double combustivel){
-        this.combustivel = combustivel;
+  
+    private boolean okAbastecer(Double nivelTanque) {
+      return (this.nivelTanque + nivelTanque <= getCapacidadeTanque() && nivelTanque > 0);
     }
-
-    public boolean getligado() {
-        return ligado;
-    }
-
-    public double getVelocidade() {
-        return velocidade;
-    }
-
-    public void setVelocidade(double velocidade) {
-        this.velocidade = velocidade;
-    }
-
-    public void ligar(double combustivel){
-        if(combustivel>0)
-        ligado=true;
-    }
-    
-    public void desligar(double combustivel){
-        if(combustivel<0)
-        ligado=false;
-    }
-
-    public double getcombustivel() {
-        return combustivel;
-    }
-    
-    public void abastecer(){
-        combustivel = capacidadeTanque;
-    }
-
-    public void acelerar ()
-
-    if(this.combustivel>0 && this.ligado == true){
-
-        this.velocidade += 10;
-        this.combustivel --;
-        if (this.combustivel <= this.capacidadeTanque*0.1){
-            System.out.println("O carro está na reserva. Abasteça Imediatamente!");
+  
+    public void abastecer(Double nivelTanque) {
+      if (okAbastecer(nivelTanque)){
+        if (nivelTanque > capacidadeTanque) {
+          this.nivelTanque = capacidadeTanque;
+        } else {
+          this.nivelTanque = nivelTanque;
         }
-        if (this.velocidade > this.velocidadeMax){
-            this.velocidade = velocidadeMax;
-        }    
+      }
     }
-
-}
+  
+    public Double porcentagemNivelTanque() {
+      return (nivelTanque * 100) / capacidadeTanque;
+    }
+  
+    public Double getPotenciaMotor() {
+      return potenciaMotor;
+    }
+  
+    private void setPotenciaMotor(Double potenciaMotor) {
+      if (potenciaMotor >= 1d && potenciaMotor <= 2d){
+        this.potenciaMotor = potenciaMotor;
+      }
+    }
+  
+    public Double getVelocidade() {
+      return velocidade;
+    }
+  
+    private boolean podeAcelerar() {
+      return (
+        (velocidade + potenciaMotor <= velocidadeMaxima) && estaLigado() && (nivelTanque > 0d)
+      );
+    }
+  
+    public void acelerar() {
+      if (podeAcelerar()){
+        velocidade += potenciaMotor;
+        nivelTanque -= potenciaMotor;
+        checarReserva();
+        checarTanque();
+      } 
+    }
+  
+    public void frear() {
+      if (estaLigado() && (nivelTanque > 0d)) {
+        velocidade -= potenciaMotor;
+        nivelTanque -= potenciaMotor;
+        checarReserva();
+        checarTanque();
+      }
+    }
+  
+    private void checarTanque() {
+      if (nivelTanque <= 0d) {  
+        nivelTanque = 0d;
+        velocidade = 0d;
+        desligar();
+      }
+    }
+  
+    private void checarReserva() {
+      Double nivelReserva = capacidadeTanque * 0.1;
+  
+      if (nivelTanque <= nivelReserva) {
+        System.out.println("Chegou na Reserva!!");
+        reserva = true;
+      }
+    }
+  
+    public Double getVelocidadeMaxima() {
+      return velocidadeMaxima;
+    }
+  
+    private void setVelocidadeMaxima(Double velocidadeMaxima) {
+      if (velocidadeMaxima > 0d && velocidadeMaxima <= 300d) {
+        this.velocidadeMaxima = velocidadeMaxima;
+      }
+    }
+  
+    public Boolean estaLigado() {
+      return ligado;
+    }
+  
+    public void ligar() {
+      ligado = true;
+    }
+  
+    public void desligar() {
+      ligado = false;
+    }
+  
+    public void printCarro() {
+      System.out.println("\tInformações"
+        + "\nModelo: " + modelo
+        + "\nCapacidade do Tanque: " + capacidadeTanque
+        + "\nNível do tanque: " + nivelTanque
+        + "\n% nível tanque: " + porcentagemNivelTanque() + "%"
+        + (reserva ? "\nTanque na reserva! " : "")
+        + "\nVelocidade atual: " + velocidade
+        + "\nValocidade Máxima: " + velocidadeMaxima
+        + "\nCarro " + (estaLigado() ? "ligado" : "desligado")
+      );
+    }
+  
+    public Carro () {
+      modelo = "";
+      capacidadeTanque = 100d;
+      nivelTanque = 0d;
+      potenciaMotor = 1d;
+      velocidadeMaxima = 100d; 
+      velocidade = 0d;
+      reserva = false;
+      ligado = false;
+    }
+  }
