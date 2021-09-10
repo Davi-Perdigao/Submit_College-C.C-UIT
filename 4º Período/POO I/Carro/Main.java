@@ -13,16 +13,16 @@ public class Main {
     System.out.println("Modelo do Carro: ");
     String modeloCarro = s.nextLine();
 
-    System.out.println("Capacidade do tanque (L): ");
+    System.out.println("Tanque (L): ");
     Double capacidadeTanque = s.nextDouble();
 
     System.out.println("Velocidade máxima permitida (Km): ");
     Double velociadeMaxima = s.nextDouble();
 
     System.out.println("Potência do motor (CV): ");
-    Double potenciaCarro = s.nextDouble();
+    Double potenciaMotor = s.nextDouble();
 
-    Carro carroX = new Carro(modeloCarro, capacidadeTanque, velociadeMaxima, potenciaCarro);
+    Carro carroX = new Carro(modeloCarro, capacidadeTanque, velociadeMaxima, potenciaMotor);
     
     menu(carroX);
   }  
@@ -45,7 +45,7 @@ public class Main {
         + "\n4 - Acelerar" 
         + "\n5 - Frear" 
         + "\n0 - Sair do Menu" 
-        + "\n Resposta: "  
+        + "\n Opção: "  
       );
       
       opcao = s.nextInt();

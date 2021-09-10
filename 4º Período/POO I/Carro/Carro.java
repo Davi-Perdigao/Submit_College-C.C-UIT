@@ -17,7 +17,7 @@ public class Carro {
     private String modelo;
     private Double capacidadeTanque;
     private Double nivelTanque;
-    private Double potenciaMotor;
+    private Double potencia;
     private Double velocidade;
     private Double velocidadeMaxima;
     private Boolean ligado;
@@ -27,13 +27,18 @@ public class Carro {
     tanque, velocidade máxima e potencia do motor(1.0, 1.4, 1.8, etc)
     */
 
-    public Carro (String modelo, Double capacidadeTanque, Double velocidadeMaxima, Double potenciaMotor) { 
+    public Carro (String modelo, Double capacidadeTanque, Double velocidadeMaxima, Double potencia) { 
         this();
         setModelo(modelo);
         setCapacidadeTanque(capacidadeTanque);
-        setPotenciaMotor(potenciaMotor);
+        setPotencia(potencia);
         setVelocidadeMaxima(velocidadeMaxima);
+
+        this.velocidade = 0.0;
+        this.nivelTanque = 0.0;
       }
+
+      
   
     public String getModelo() {
       return modelo;
@@ -75,13 +80,13 @@ public class Carro {
       return (nivelTanque * 100) / capacidadeTanque;
     }
   
-    public Double getPotenciaMotor() {
-      return potenciaMotor;
+    public Double getPotencia() {
+      return potencia;
     }
   
-    private void setPotenciaMotor(Double potenciaMotor) {
+    private void setPotencia(Double potenciaMotor) {
       if (potenciaMotor >= 1d && potenciaMotor <= 2d){
-        this.potenciaMotor = potenciaMotor;
+        this.potencia = potenciaMotor;
       }
     }
   
@@ -91,14 +96,14 @@ public class Carro {
   
     private boolean podeAcelerar() {
       return (
-        (velocidade + potenciaMotor <= velocidadeMaxima) && estaLigado() && (nivelTanque > 0d)
+        (velocidade + potencia <= velocidadeMaxima) && estaLigado() && (nivelTanque > 0d)
       );
     }
   
     public void acelerar() {
       if (podeAcelerar()){
-        velocidade += potenciaMotor;
-        nivelTanque -= potenciaMotor;
+        velocidade += potencia;
+        nivelTanque -= potencia;
         checarReserva();
         checarTanque();
       } 
@@ -106,8 +111,8 @@ public class Carro {
   
     public void frear() {
       if (estaLigado() && (nivelTanque > 0d)) {
-        velocidade -= potenciaMotor;
-        nivelTanque -= potenciaMotor;
+        velocidade -= potencia;
+        nivelTanque -= potencia;
         checarReserva();
         checarTanque();
       }
@@ -125,7 +130,7 @@ public class Carro {
       Double nivelReserva = capacidadeTanque * 0.1;
   
       if (nivelTanque <= nivelReserva) {
-        System.out.println("Chegou na Reserva!!");
+        System.out.println("RESERVA!!!");
         reserva = true;
       }
     }
@@ -169,7 +174,7 @@ public class Carro {
       modelo = "";
       capacidadeTanque = 100d;
       nivelTanque = 0d;
-      potenciaMotor = 1d;
+      potencia = 1d;
       velocidadeMaxima = 100d; 
       velocidade = 0d;
       reserva = false;
