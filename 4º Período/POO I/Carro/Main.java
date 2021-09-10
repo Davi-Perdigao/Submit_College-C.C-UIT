@@ -74,7 +74,6 @@ public class Main {
           System.out.println("Opção invalida!");
           break;
       }
-  
     } while (opcao != 0);
   }
 }
