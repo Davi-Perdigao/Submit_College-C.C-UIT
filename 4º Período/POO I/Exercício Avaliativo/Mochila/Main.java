@@ -20,7 +20,7 @@ public class Main {
 
         int opcao=0;
         do{
-            System.out.println("Digite o que deseja:");
+            System.out.println("Escolha uma opção:");
             System.out.println("0-Sair");
             System.out.println("1-Inserir");
             System.out.println("2-Imprimir Detalhe");
