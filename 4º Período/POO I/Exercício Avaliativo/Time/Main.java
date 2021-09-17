@@ -15,12 +15,12 @@ public class Main {
             System.out.print("Informe o nome: ");
             nome = entrada.nextLine();
 
-            System.out.print("Informe a serie (A a E): ");
+            System.out.print("Informe a serie (A, B, C, D ou E): ");
             serie = entrada.nextLine();
 
             time[i] = new Time(nome, serie);
 
-            System.out.print("Informe o número de jogadores: ");
+            System.out.print("Informe o número de jogadores (máximo 22, sujeito a exclusão de atletas): ");
             numeroJogadores = entrada.nextInt();
             entrada.nextLine();
 
