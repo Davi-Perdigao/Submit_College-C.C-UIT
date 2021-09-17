@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//Crie outraclasse para testar
 public class Main
 {
     public static void main(String args[])

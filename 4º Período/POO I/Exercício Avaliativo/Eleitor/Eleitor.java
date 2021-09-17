@@ -6,6 +6,7 @@
 
 public class Eleitor
 {  
+//atributos idade, sexo, nome e numero do título
     private String nome;
     private String sexo;
     private int idade;
@@ -61,6 +62,8 @@ public class Eleitor
                 "\nIdade: " + getIdade() +
                 "\nTitulo: \n" + getTitulo();
     }
+
+//Faça um método que retorne se a pessoa é Obrigada, Desobrigada ou impedida de votar
 
     public String checarVotacao() // 16 / 18 / 65 anos
     {
