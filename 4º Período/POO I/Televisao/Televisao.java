@@ -92,12 +92,6 @@ public class Televisao
         }
     }
 
-    public void aumentaCanal(int canal){
-        if(isLigado() == true && canal < qtdCanais && canal > 1){
-            this.canal = canal;
-        }
-    }
-
     public void abaixaCanal(){
         if(isLigado() == true && getCanal() > 1){
             this.canal = getCanal() - 1;
