@@ -128,12 +128,8 @@ public class Televisao
         }
     }
 
-
     public String toString(){
         return  "\nTelevisão - Marca:"+this.marca+ "\nVolume: "+getVolume()+"\nCanal: "+getCanal()+"\nLigado: "+getLigado();
     }
-
-    
-
 
 }
