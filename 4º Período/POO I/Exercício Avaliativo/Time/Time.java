@@ -8,6 +8,7 @@ teste em outra classe cadastrando 2 times.
 
 public class Time
 {
+    
 //nome do time, a série que ele joga e o número de jogadores
     private String nome;
     private String serie;
