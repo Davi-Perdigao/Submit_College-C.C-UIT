@@ -1,6 +1,6 @@
 /*Crie a classe Time que possua o nome do time, a série 
 ue ele joga e o número de jogadores. As séries podem ser 
-de A, B, C, D ouE. O números de jogadores é no máximo 22. 
+de A, B, C, D ou E. O números de jogadores é no máximo 22. 
 Crie um construtor onde seja obrigatório inserir no momento 
 da criação da instância o nome e a série do time. Faça o 
 teste em outra classe cadastrando 2 times.
