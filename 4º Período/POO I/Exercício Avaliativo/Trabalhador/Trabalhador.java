@@ -6,11 +6,12 @@
 
 public class Trabalhador
 {
+//atributos matrícula, nome e salário
     private String matricula;
     private String nome;
     private double salario;
 
-    private final Double salarioMinimo = 1147d;
+    private final Double salarioMinimo = 1147d; //ninguém pode ganhar menos que um salário mínimo
 
     public void setMatricula(String matricula)
     {

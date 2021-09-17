@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//Crie uma outra classe com o método main e peça ao usuário para cadastrar 3 trabalhadores
 public class Main {
     public static void main(String args[]){
         Scanner entrada = new Scanner(System.in);
