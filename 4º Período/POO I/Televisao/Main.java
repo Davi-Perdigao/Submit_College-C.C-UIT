@@ -32,7 +32,7 @@ public class Main {
 
             switch(opcao){
                 case 0:
-                    System.out.println("Muito Obrigado ate Mais.");
+                    System.out.println("Finalizando...");
                     break;
                 case 1:
                     televisao.ligar();
