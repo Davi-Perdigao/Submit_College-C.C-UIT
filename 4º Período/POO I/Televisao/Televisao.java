@@ -16,58 +16,124 @@ atual. Crie menu para interagir com a TV. Utilize métodos Get e Set.
 
 public class Televisao
 {
-    private Strig marca;
-    private int quantCanais;
-    private int canalAtual;
-    private int volMaximo;
+    private int canal;
     private int volume;
-    private boolean ligado;
+    private String marca;
+    private int qtdCanais;
+    private int volumeMaximo;
+    private Boolean ligado;
 
-    public Televisao (String marca){
-        setMarca(marca);
+    public Televisao(String marca){
+        this.marca = marca;
+        this.ligado = false;
     }
 
-    public Televisao (String marca, int quantCanais, int volMaximo){
-        setMarca(marca);
-        setQuantCanais(quantCanais);
-        setVolMaximo (volMaximo);
+    public Televisao(String marca,int qtdCanais,int volumeMaximo){
+        this.marca = marca;
+        this.qtdCanais = qtdCanais;
+        this.volumeMaximo = volumeMaximo;
+        this.ligado = false;
+    }
+    
+    public int getVolume(){
+        return this.volume;
     }
 
-    public void ligar (){
-        this.ligado = true;
+    public int getCanal(){
+        return this.canal;
+    }
+
+    public boolean getLigado(){
+        return this.ligado;
+    }
+
+    public void ligar(){
+        ligado=true;
     }
 
     public void desligar(){
-        this,ligado = false;
+        ligado=false;
     }
-
-    public void trocarCanal(){
-        this.canalAtual++;
-    }
-
-    public void trocarCanal(int canal){
-
-    }
-
-    // controlando volume
-    public void aumentarVolume(int volume){
-        if (volume>0 && volume<=this.volMaximo){
-            if(this.volume+volume > this.volMaximo){
-                this.volume = this.volMaximo;
-            } else{
-                this.volume +=volume;
+    
+    public void setCanal(int canal) {
+        if(ligado==true){
+            if(canal>0 && canal<=qtdCanais){
+            this.canal = canal;
             }
         }
     }
 
-    public void diminuirVolume(int volume){
-        if (volume>0 && volume<=this.volMaximo){
-            if(this.volume-volume < 0 ){
-                this.volume = 0;
-            } else{
-                this.volume -=volume;
+    public void setLigado(){
+
+        if(getLigado() == false){
+            this.ligado = true;
+        }else if(getLigado() == true){
+            this.ligado = false;
+        }
+    }
+   
+    public void aumentarVolume(){
+        if(ligado==true){
+            if(volume>=0 && volume<volumeMaximo){
+                volume++;
+            }else{
+                volume=volumeMaximo;
             }
         }
     }
+
+    public void abaixarVolume(){
+        if(ligado==true){
+            if(volume>0 && volume<=volumeMaximo){
+                volume--;
+            }
+        }
+    }
+
+    public void aumentaCanal(){
+        if(isLigado() == true && getCanal() < qtdCanais){
+            this.canal = getCanal() + 1;
+        }else{
+            this.canal = 0;
+        }
+    }
+
+    public void aumentaCanal(int canal){
+        if(isLigado() == true && canal < qtdCanais && canal > 0){
+            this.canal = canal;
+        }
+    }
+
+    public void abaixaCanal(){
+        if(isLigado() == true && getCanal() > 0){
+            this.canal = getCanal() - 1;
+        }
+    }
+
+    public void escolheCanal(int escolha){
+        if(isLigado() == true && escolha> 0 && escolha < this.qtdCanais){
+            setCanal(escolha);
+        }
+    }
+
+    public String detalhe(){
+        return "Volume: "+getVolume()+" Canal: "+getCanal();
+    }
+
+    public Boolean isLigado(){
+        if(getLigado() == true){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+
+    public String toString(){
+        return  "\nTelevisão - Marca:"+this.marca+ "\nVolume: "+getVolume()+"\nCanal: "+getCanal()+"\nLigado: "+getLigado();
+    }
+
+    
+
 
 }
