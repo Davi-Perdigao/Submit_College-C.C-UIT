@@ -57,7 +57,7 @@ public class Televisao
     
     public void setCanal(int canal) {
         if(ligado==true){
-            if(canal>0 && canal<=qtdCanais){
+            if(canal>1 && canal<=qtdCanais){
             this.canal = canal;
             }
         }
@@ -88,7 +88,7 @@ public class Televisao
         if(isLigado() == true && getCanal() < qtdCanais){
             this.canal = getCanal() + 1;
         }else{
-            this.canal = 0;
+            this.canal = 1;
         }
     }
 
@@ -99,7 +99,7 @@ public class Televisao
     }
 
     public void abaixaCanal(){
-        if(isLigado() == true && getCanal() > 0){
+        if(isLigado() == true && getCanal() > 1){
             this.canal = getCanal() - 1;
         }
     }
