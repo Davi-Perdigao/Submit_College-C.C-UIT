@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//Criar uma classe de teste e testar tentando inserir vários itens na mochil
 public class Main {
     
     public static void main(String[] args){
@@ -34,7 +34,7 @@ public class Main {
                     mochila.inserir(input.nextDouble());
                     break;
                 case 2:
-                    System.out.println(mochila.imprimeDetalhe());
+                    System.out.println(mochila.imprimeInfo());
                     break;
                 default:
                     System.out.println("Opção Inválida!");
