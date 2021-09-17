@@ -93,7 +93,7 @@ public class Televisao
     }
 
     public void aumentaCanal(int canal){
-        if(isLigado() == true && canal < qtdCanais && canal > 0){
+        if(isLigado() == true && canal < qtdCanais && canal > 1){
             this.canal = canal;
         }
     }
@@ -105,7 +105,7 @@ public class Televisao
     }
 
     public void escolheCanal(int escolha){
-        if(isLigado() == true && escolha> 0 && escolha < this.qtdCanais){
+        if(isLigado() == true && escolha> 1 && escolha < this.qtdCanais){
             setCanal(escolha);
         }
     }
