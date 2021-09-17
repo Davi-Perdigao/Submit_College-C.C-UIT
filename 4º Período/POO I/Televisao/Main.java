@@ -1,13 +1,15 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args){
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Informe a Marca da Televisão:");
+        System.out.println("Informe a marca da Televisão:");
         String marca = input.nextLine();
-        System.out.println("Informe a Quantidade Maxia de canais:");
+        System.out.println("Informe a quantidade máxima de canais:");
         int quantidadeCanais = input.nextInt();
-        System.out.println("Informe o Volume Maximo da Televisão:");
+        System.out.println("Informe o volume máximo da Televisão:");
         int volumeMaximo= input.nextInt();
 
         Televisao televisao = new Televisao(marca, quantidadeCanais, volumeMaximo);
@@ -16,7 +18,7 @@ public class Main {
 
         int opcao=0;
         do{
-            System.out.println("Digite o que deseja:");
+            System.out.println("Digite a opção deseja:");
             System.out.println("0 - Sair");
             System.out.println("1 - Ligar");
             System.out.println("2 - Desligar");
