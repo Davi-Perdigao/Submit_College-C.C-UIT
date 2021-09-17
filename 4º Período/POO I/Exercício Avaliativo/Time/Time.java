@@ -8,9 +8,12 @@ teste em outra classe cadastrando 2 times.
 
 public class Time
 {
+//nome do time, a série que ele joga e o número de jogadores
     private String nome;
     private String serie;
     private int numeroJogadores;
+
+//construtor onde seja obrigatório inserir no momento da criação da instância o nome e a série do time
 
     public Time(String nome, String serie){
         setNome(nome);
@@ -28,6 +31,8 @@ public class Time
     public String getSerie() {
         return serie;
     }
+
+//As séries podem ser de A, B, C, D ou E
 
     private void setSerie(String serie) {
         char s = serie.charAt(0);
@@ -63,7 +68,7 @@ public class Time
         if(numeroJogadores>0 && numeroJogadores<=22){
             this.numeroJogadores = numeroJogadores;
         } else{
-            this.numeroJogadores = 22;
+            this.numeroJogadores = 22; //O números de jogadores é no máximo 22
         }
     }
     

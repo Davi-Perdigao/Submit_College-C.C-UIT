@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//Faça o teste em outra classe cadastrando 2 times
 public class Main {
     public static void main(String[] args)
     {
