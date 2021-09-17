@@ -7,12 +7,15 @@
 
 public class Boleto
 {
+//atributos vencimento, valor, desconto, um booleano se está pago e nome do cliente
+
     private String cliente;
     private String vencimento;
     private double valor;
     private double desconto;
     private boolean boletoPago;
 
+//Crie um construtor para que todos dados sejam passados no momento da instanciação dos objetos
     public Boleto(String cliente, String vencimento, double valor, double desconto)
     {
         this.cliente = cliente;
@@ -22,6 +25,8 @@ public class Boleto
         this.boletoPago = false;
     }
 
+//Crie um método que retorne o valor líquido do boleto
+    
     public double calcularValLiquido()
     {
         if(this.valor >= this.desconto){
@@ -31,9 +36,10 @@ public class Boleto
         }
     }
 
+//Crie também um método pagar que altera o boleto para pago
     public void pagarBoleto()
     {
-        this.boletoPago = true; //neste caso, boleto pago
+        this.boletoPago = true; 
     }
 
     public String verificarPagamento()
