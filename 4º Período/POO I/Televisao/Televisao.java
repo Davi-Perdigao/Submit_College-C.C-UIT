@@ -73,20 +73,14 @@ public class Televisao
     }
    
     public void aumentarVolume(){
-        if(ligado==true){
-            if(volume>=0 && volume<volumeMaximo){
-                volume++;
-            }else{
-                volume=volumeMaximo;
-            }
+        if(ligado==true && volume<volumeMaximo){
+            volume++;
         }
     }
 
     public void abaixarVolume(){
-        if(ligado==true){
-            if(volume>0 && volume<=volumeMaximo){
-                volume--;
-            }
+        if(ligado==true && volume>0){
+            volume--;
         }
     }
 
