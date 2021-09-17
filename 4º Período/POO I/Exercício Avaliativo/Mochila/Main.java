@@ -7,11 +7,11 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Digite o Nome da Mochila:");
+        System.out.println("Digite o nome da mochila: ");
         String nome = input.nextLine();
-        System.out.println("Digite a Quantidade de tens maxima:");
+        System.out.println("Digite a quantidade maxima de itens: ");
         int quantidadeItensMaxima = input.nextInt();
-        System.out.println("Digite o Peso maximo da mochila:");
+        System.out.println("Digite o peso maximo da mochila: ");
         double pesoMaximo  = input.nextDouble();
 
         Mochila mochila = new Mochila(nome, quantidadeItensMaxima, pesoMaximo);
@@ -27,17 +27,17 @@ public class Main {
             opcao=input.nextInt();
             switch(opcao){
                 case 0:
-                    System.out.println("Muito Obrigado ate Mais.");
+                    System.out.println("Finalizando tarefa...");
                     break;
                 case 1:
-                    System.out.println("Informe o Peso do Item:");
+                    System.out.println("Informe o peso do item:");
                     mochila.inserir(input.nextDouble());
                     break;
                 case 2:
                     System.out.println(mochila.imprimeDetalhe());
                     break;
                 default:
-                    System.out.println("Opção Inválida");
+                    System.out.println("Opção Inválida!");
                  
 
             }
@@ -46,4 +46,4 @@ public class Main {
         input.close();
     }
 }
-}
+

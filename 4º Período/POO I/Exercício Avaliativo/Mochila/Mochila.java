@@ -14,8 +14,6 @@ public class Mochila {
     private double pesoAtual;
     private double pesoMaximo;
 
-    
-
     public Mochila(String nome, int quantidadeItensMaxima, double pesoMaximo) {
         this.nome = nome;
         this.quantidadeItensMaxima = quantidadeItensMaxima;
@@ -51,10 +49,10 @@ public class Mochila {
                 pesoAtual += peso;
                 quantidadeItensAtual++;
             }else{
-                System.out.println("A mochila esta cheia ou o peso que foi inserido ultrapassa a capacidade máxima da mochila ou a quantidade máxima de itens já foi preenchida");
+                System.out.println("Peso e/ou Limite de itens da mochila atingido(s) !");
             }
         }else{
-            System.out.println("A mochila esta cheia ou o peso que foi inserido ultrapassa a capacidade máxima da mochila ou a quantidade máxima de itens já foi preenchida");
+            System.out.println("Peso e/ou Limite de itens da mochila atingido(s) !");
         }
 
     }
@@ -68,7 +66,5 @@ public class Mochila {
         return "Mochila [nome=" + nome + ", pesoMaximo=" + pesoMaximo + ", quantidadeItensMaxima="
                 + quantidadeItensMaxima + "]";
     }
-
-    
 
 }
