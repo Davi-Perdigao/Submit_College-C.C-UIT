@@ -11,59 +11,84 @@ Desce: para descer um andar (não deve descer se já estiver no térreo);
 Encapsular todos os atributos da classe (criar os métodos set e get).
 */
 
-public class Elevador { 
-    //Variaveis globais 
-    private int nAtual, nTotal, nCapac, nPessoas; 
-  
-    //Classe principal 
-    public Elevador(int nA, int nT, int nC, int nP) { 
-      this.nAtual   = nA; 
-      this.nTotal   = nT; 
-      this.nCapac   = nC; 
-      this.nPessoas = nP; 
-    } 
-  
-    //Get - Capacidade 
-    public int getCapac()    { 
-      return this.nCapac;} 
-    //Get - Pessoas presentes 
-    public int getPessoas()    { 
-      return this.nPessoas;} 
-    //Get - Total de andares 
-    public int getTotal()    { 
-      return this.nTotal;} 
-    //Get - Andar Atual 
-    public int getAtual()    { 
-      return this.nAtual;} 
-  
-    //Set - Pessoas Presentes 
-    public void setPes(int nPe){ 
-      this.nPessoas = nPe;} 
-  
-    //Inicializa 
-    public void Inicializa(int nCap,int nTot){ 
-      this.nTotal   = nTot; 
-      this.nCapac   = nCap; 
-    } 
-  
-    //Entra pessoa 
-    public void Entra(){ 
-      this.nPessoas+=1; 
-    } 
-  
-    //Sai pessoa 
-    public void Sai(){ 
-      this.nPessoas-=1; 
-    } 
-  
-    //Sobe de andar 
-    public void Sobe(){ 
-      this.nAtual+=1; 
-    } 
-  
-    //Desce de andar 
-    public void Desce(){ 
-      this.nAtual-=1; 
-    } 
-  
-  }
+public class Elevador
+{
+    private int andarAtual;
+    private int totalAndares;
+    private int capacidadeElevador;
+    private int pessoasNoElevador;
+
+    public Elevador(int capacidadeElevador, int totalAndares){
+        setCapacidadeElevador(capacidadeElevador);
+        setTotalAndares(totalAndares);
+        this.andarAtual = 0;
+        this.pessoasNoElevador = 0;
+    }
+
+    public void Entrar(){
+        if(getPessoasNoElevador() < this.capacidadeElevador){
+            this.pessoasNoElevador ++;
+        }
+    }
+    
+    public void Sair(){
+        if(getPessoasNoElevador() >= 1){
+            this.pessoasNoElevador --;
+        }
+    }
+
+    public void Subir(){
+        if(getAndarAtual() < this.totalAndares){
+            this.andarAtual ++;
+        }
+    }
+
+
+    public void Descer(){
+        if(getAndarAtual() >= 1){
+            this.andarAtual --;
+        }
+    }
+
+
+    public String Infos() {
+        String mensagem = String.format("Pessoas no elevador: %d\nAndar atual: %d\nTotal de anadres: %d\nCapacidade: %d\n", this.pessoasNoElevador, this.andarAtual, this.totalAndares, this.capacidadeElevador);
+        return mensagem;
+    }
+
+    public int getAndarAtual() {
+        return andarAtual;
+    }
+
+    public void setAndarAtual(int andarAtual) {
+        this.andarAtual = andarAtual;
+    }
+
+    public int getTotalAndares() {
+        return totalAndares;
+    }
+
+    private void setTotalAndares(int totalAndares) {
+        if(totalAndares>0){
+            this.totalAndares = totalAndares;
+        }  
+    }
+
+    public int getCapacidadeElevador() {
+        return capacidadeElevador;
+    }
+
+    private void setCapacidadeElevador(int capacidadeElevador) {
+        if(capacidadeElevador>0){
+            this.capacidadeElevador = capacidadeElevador;
+        }
+    }
+
+    public int getPessoasNoElevador() {
+        return pessoasNoElevador;
+    }
+
+    public void setPessoasnoElevador(int pessoasNoElevador) {
+        this.pessoasNoElevador = pessoasNoElevador;
+    }
+}
