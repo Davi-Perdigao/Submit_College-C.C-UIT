@@ -17,30 +17,53 @@ public class Main {
 
             switch (opcao) {
                 case 1:
-                    System.out.println("Informe a quantidade de pessoas que vão entrar:");
+                    System.out.println("Você está sozinho? Escolha: 0-NÃO ou 1-SIM");
                     resposta = input.nextInt();
-                    if (resposta<=capacidadeMaxima){
-                    quantidadePessoas = input.nextInt();
-                    elevador.Entrar(quantidadePessoas);
-                    } else{
-                        resposta=capacidadeMaxima;
+
+                    if (resposta == 0) {
+                        System.out.println("Informe a quantidade de pessoas com você:");
+                        quantidadePessoas = input.nextInt();
+                        elevador.Entrar(quantidadePessoas);
+                    } else {
+                        elevador.Entrar();
                     }
                     break;
                 case 2:
-                    System.out.println("Informe a quantidade de pessoas que vão sair:");
-                    quantidadePessoas = input.nextInt();
-                    elevador.Sair(quantidadePessoas);
+                    System.out.println("Alguém sairá com você? Escolha: 0-NÃO ou 1-SIM");
+                    resposta = input.nextInt();
+
+                    if (resposta == 1) {
+                        System.out.println("Informe quantas pessoas irão sair:");
+                        quantidadePessoas = input.nextInt();
+                        elevador.Sair(quantidadePessoas);
+                    } else {
+                        elevador.Sair();
+                    }
                     break;
                 case 3:
-                    System.out.println("Informe a quantidade de andares que deseja subir:");
-                    andar = input.nextInt();
-                    elevador.Subir(andar);
+                    System.out.println("Deseja escolher para qual andar subir? Escolha: 0-NÃO ou 1-SIM");
+                    resposta = input.nextInt();
+
+                    if (resposta == 1) {
+                        System.out.println("Informe o andar:");
+                        andar = input.nextInt();
+                        elevador.Subir(andar);
+                    } else {
+                        elevador.Subir();
+                    }
                     break;
                 case 4:
-                    System.out.println("Informe a quantidade de andares que deseja descer:");
-                    andar = input.nextInt();
-                    elevador.Descer(andar);
-                break;
+                    System.out.println("Deseja escolher para qual andar descer? Escolha: 0-NÃO ou 1-SIM");
+                    resposta = input.nextInt();
+
+                    if (resposta == 1) {
+                        System.out.println("Informe qual andar:");
+                        andar = input.nextInt();
+                        elevador.Descer(andar);
+                    } else {
+                        elevador.Descer();
+                    }
+                    break;
                 case 5:
                     System.out.println(elevador.Infos());
                     break;

@@ -5,14 +5,13 @@ subir ou descer e quantas pessoas irão entrar ou sair
 através de sobrecarga.
 */
 
-public class Elevador
-{
+public class Elevador {
     private int andarAtual;
     private int totalAndares;
     private int capacidadeElevador;
     private int pessoasNoElevador;
 
-    public Elevador(int capacidadeElevador, int totalAndares){
+    public Elevador(int capacidadeElevador, int totalAndares) {
         setCapacidadeElevador(capacidadeElevador);
         setTotalAndares(totalAndares);
         this.andarAtual = 0;
@@ -20,62 +19,71 @@ public class Elevador
     }
 
     public void Entrar(){
-        if(this.pessoasNoElevador<this.capacidadeElevador){
-            this.pessoasNoElevador++;
+        if(getPessoasNoElevador() < this.capacidadeElevador){
+            this.pessoasNoElevador ++;
         }
     }
 
+    // Quantas pessoas irão entrar
     public void Entrar(int quantidadePessoas){
         if(this.pessoasNoElevador<this.capacidadeElevador){
             if(this.pessoasNoElevador+quantidadePessoas <= this.capacidadeElevador){
                 this.pessoasNoElevador += quantidadePessoas;
+            } else{
+                this.pessoasNoElevador = this.capacidadeElevador;
             }
         }
     }
-    
+
     public void Sair(){
-        if(this.pessoasNoElevador>0){
-            this.pessoasNoElevador--;
+        if(getPessoasNoElevador() >= 1){
+            this.pessoasNoElevador --;
         }
     }
 
-    public void Sair(int quantidadePessoas){
-        if(this.pessoasNoElevador>0){
-            if(this.pessoasNoElevador-quantidadePessoas >= 0){
+    // Quantas pessoas irão sair
+    public void Sair(int quantidadePessoas) {
+        if (this.pessoasNoElevador > 0) {
+            if (this.pessoasNoElevador - quantidadePessoas >= 0) {
                 this.pessoasNoElevador -= quantidadePessoas;
-            } else{
+            } else {
                 this.pessoasNoElevador = 0;
             }
         }
     }
 
-    public void Subir(){
-        if(this.andarAtual<this.capacidadeElevador){
-            this.andarAtual++;
+    public void Subir() {
+        if (this.pessoasNoElevador > 0) { //não pode subir ou descer sem pessoas dentro do elevador
+            if (this.andarAtual < this.capacidadeElevador) {
+                this.andarAtual++;
+            }
         }
     }
 
-    public void Subir(int andar){
-        if(andar<=this.capacidadeElevador && this.andarAtual<andar){
-            this.andarAtual = andar; 
+    // Quantos andares subir
+    public void Subir(int andar) {
+        if (andar <= this.capacidadeElevador && this.andarAtual < andar && this.pessoasNoElevador > 0) {
+            this.andarAtual = andar;
         }
     }
 
-
-    public void Descer(){
-        if(this.andarAtual!=0){
+    public void Descer() {
+        if (this.andarAtual > 0 && this.pessoasNoElevador > 0) { //não pode subir ou descer sem pessoas dentro do elevador
             this.andarAtual--;
         }
     }
 
-    public void Descer(int andar){
-        if(this.andarAtual!=0 && andar<=this.capacidadeElevador && this.andarAtual>andar){
-                this.andarAtual = andar;
+    // Quantos andares descer
+    public void Descer(int andar) {
+        if (this.andarAtual > 0 && andar >= 0 && this.andarAtual > andar && this.pessoasNoElevador > 0) {
+            this.andarAtual = andar;
         }
     }
 
     public String Infos() {
-        String mensagem = String.format("Pessoas no elevador: %d\nAndar atual: %d\nTotal de andares: %d\nCapacidade: %d\n", this.pessoasNoElevador, this.andarAtual, this.totalAndares, this.capacidadeElevador);
+        String mensagem = String.format(
+                "Pessoas no elevador: %d\nAndar atual: %d\nTotal de andares: %d\nCapacidade: %d\n",
+                this.pessoasNoElevador, this.andarAtual, this.totalAndares, this.capacidadeElevador);
         return mensagem;
     }
 
@@ -88,9 +96,9 @@ public class Elevador
     }
 
     private void setTotalAndares(int totalAndares) {
-        if(totalAndares>0){
+        if (totalAndares > 0) {
             this.totalAndares = totalAndares;
-        }  
+        }
     }
 
     public int getCapacidadeElevador() {
@@ -98,7 +106,7 @@ public class Elevador
     }
 
     private void setCapacidadeElevador(int capacidadeElevador) {
-        if(capacidadeElevador>0){
+        if (capacidadeElevador > 0) {
             this.capacidadeElevador = capacidadeElevador;
         }
     }
