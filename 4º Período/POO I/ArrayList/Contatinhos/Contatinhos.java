@@ -1,4 +1,4 @@
-package ArrayList;
+package ArrayList.Contatinhos;
 
 public class Contatinhos {
     
