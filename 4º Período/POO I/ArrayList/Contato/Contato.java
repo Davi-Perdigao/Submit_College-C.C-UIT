@@ -39,7 +39,7 @@ public class Contato {
         this.cidade = cidade;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
     
@@ -55,7 +55,7 @@ public class Contato {
         return nome;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
