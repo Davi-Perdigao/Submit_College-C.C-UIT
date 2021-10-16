@@ -7,8 +7,16 @@ public class Aluno{
     private String nome;
     private String idade;
     private double nota;
-    private String sexo;
+    private enum sexo;
     private enumSexo sexoenum;
+
+    public enumSexo getSexoenum() {
+        return sexoenum;
+    }
+
+    public void setSexoenum(enumSexo sexoenum) {
+        this.sexoenum = sexoenum;
+    }
 
     public int getMatricula() {
         return matricula;
@@ -48,14 +56,6 @@ public class Aluno{
 
     public void setNota(double nota) {
         this.nota = nota;
-    }
-
-    public String getSexo() {
-        return sexo;
-    }
-
-    public void setSexo(String sexo) {
-        this.sexo = sexo;
     }
 
 }
