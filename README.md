@@ -28,8 +28,8 @@
 
 - [Algorítmos em Grafos](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Algoritmos%20em%20Grafos)
 - [Lab. Desenvolv. de Dispositivos Móveis](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Lab.%20Dipositivos%20M%C3%B3veis)
-- [POO I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/POO)
+- [POO I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/POO%20I)
 - [Arquitetura e Organização de Computadores III](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/AOC%20III)
-- [Banco de Dados I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Banco%20de%20Dados)
+- [Banco de Dados I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Banco%20de%20Dados%20I)
 - [Engenharia de Software I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Engenharia%20Software%20I)
 
