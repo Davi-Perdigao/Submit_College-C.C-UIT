@@ -1,61 +1,41 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Set;
 
-public class Aluno{
-    private int matricula;
-    private Sala sala;
+public class Aluno {
+    
     private String nome;
-    private String idade;
-    private double nota;
-    private enum sexo;
-    private enumSexo sexoenum;
+    private Sexo sexo;
+    private int nota;
 
-    public enumSexo getSexoenum() {
-        return sexoenum;
+    public Aluno(String nome, int nota, Sexo sexo){
+        setNome(nome);
+        setNota(nota);
+        this.sexo = sexo;
     }
 
-    public void setSexoenum(enumSexo sexoenum) {
-        this.sexoenum = sexoenum;
+    public String toString(){
+        return "Nome: " + this.nome +
+                "\nNota: " + this.nota +
+                "\nSexo: " + this.sexo;
     }
 
-    public int getMatricula() {
-        return matricula;
-    }
 
-    public void setMatricula(int matricula) {
-        this.matricula = matricula;
-    }
-
-    public Sala getSala() {
-        return sala;
-    }
-
-    public void setSala(Sala sala) {
-        this.sala = sala;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getNome() {
         return nome;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public Sexo getSexo() {
+        return sexo;
     }
 
-    public String getIdade() {
-        return idade;
-    }
-
-    public void setIdade(String idade) {
-        this.idade = idade;
-    }
-
-    public double getNota() {
+    public int getNota() {
         return nota;
     }
 
-    public void setNota(double nota) {
+    public void setNota(int nota) {
         this.nota = nota;
     }
-
 }
