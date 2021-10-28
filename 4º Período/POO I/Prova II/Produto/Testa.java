@@ -25,7 +25,7 @@ public class Testa {
 
         int opcao = 0;
         do {
-            System.out.println("--MENU--");
+            System.out.println("--MENU--"); //menu para interagir com a loja
             System.out.println("0 - Sair");
             System.out.println("1 - Adicionar Produto:");
             System.out.println("2 - Mostrar Quantidade de Produtos:");
@@ -49,10 +49,10 @@ public class Testa {
                 Produto produto = new Produto(nome, qtdeMinima, qtdeAtual);
                 loja.adicionarProduto(produto);
                 break;
-            case 2:
+            case 2: //Mostra todos produtos com as respectivas quantidades;
                 System.out.println("Quantidade de Produtos: "+loja.mostraQuantidadeProdutos());
                 break;
-            case 3:
+            case 3: //Mostra a quantidade de um produto específico;
                 input.nextLine();
                 System.out.print("Informe o nome do Produto: ");
                 nome = input.nextLine();
@@ -63,10 +63,10 @@ public class Testa {
                     System.out.println("Sem Estoque!");
                 }
                 break;
-            case 4:
+            case 4: //Este exibe apenas os produtos que estão abaixo da quantidade mínima
                 System.out.println("Produtos abaixo do Minimo: "+loja.mostraProdutosAbaixoDoMinimo());
                 break;
-            case 5:
+            case 5: //Este exibe o somatório de todos produtos da lista
                 System.out.println("Total de Produtos: " +loja.totalProdutos());
                 break;
             default:

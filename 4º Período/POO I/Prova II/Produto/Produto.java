@@ -12,7 +12,7 @@ public class Produto {
     public Produto() {
     }
 
-    public String toString(){
+    public String toString(){ //Este método mostra as características do Produto
         String mensagem = String.format("Nome: %s\nQuantidade atual: %d\n", this.nome, this.qtdeMinima, this.qtdeAtual);
         return mensagem;
     }
@@ -47,7 +47,7 @@ public class Produto {
         }
     }
 
-    public void repor(int quantidade) {
+    public void repor(int quantidade) { //Este método aumenta o valor da qtdeAtual
         if (quantidade > 0) {
             this.qtdeAtual += quantidade;
         }

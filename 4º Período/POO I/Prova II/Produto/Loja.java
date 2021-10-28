@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Loja {
     private String nome;
-    private ArrayList<Produto> loja = new ArrayList<>();
+    private ArrayList<Produto> loja = new ArrayList<>(); //arrayList de produtos
 
     public String getNome() {
         return nome;
@@ -16,11 +16,11 @@ public class Loja {
         return loja;
     }
 
-    public void adicionarProduto(Produto produto){
+    public void adicionarProduto(Produto produto){ //Adiciona um novo produto
         loja.add(produto);
     }
 
-    public String mostraQuantidadeProdutos(){
+    public String mostraQuantidadeProdutos(){ //Mostra todos produtos com as respectivas quantidades;
         String quantidadeprod = "\t";
 
         for ( Produto x : loja){
@@ -29,7 +29,7 @@ public class Loja {
         return quantidadeprod;
     }
 
-    public int mostraQuantidadeProdutos(String nome){
+    public int mostraQuantidadeProdutos(String nome){ //Mostra a quantidade de um produto específico;
         int quantidade = 0;
         for(Produto x : loja){
             if(x.getNome().equals(nome)){
@@ -39,7 +39,7 @@ public class Loja {
         return quantidade;
     }
 
-    public Produto mostraProdutosAbaixoDoMinimo(){
+    public Produto mostraProdutosAbaixoDoMinimo(){ //Exibe apenas os produtos que estão abaixo da quantidade mínima
         Produto produto = null;
         for(Produto x : loja){
             if(x.getQtdeAtual()<x.getQtdeMinima()){
@@ -49,7 +49,7 @@ public class Loja {
         return produto;
     }
 
-    public int totalProdutos(){
+    public int totalProdutos(){ //Exibe o somatório de todos produtos da lista
         int totalProdutos = 0;
         for(Produto p : loja){
             totalProdutos += p.getQtdeAtual();
