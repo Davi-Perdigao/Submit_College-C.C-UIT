@@ -37,7 +37,7 @@ public class Testa {
             case 0:
                 System.out.println("Finalizando...");
                 break;
-            case 1:
+            case 1: //Entrando com nome, quantidade mínima e atual do produto
                 input.nextLine();
                 System.out.print("Informe o nome do Produto: ");
                 String nome = input.nextLine();
