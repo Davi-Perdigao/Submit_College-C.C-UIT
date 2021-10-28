@@ -21,7 +21,7 @@ public class Principal {
         System.out.println("Numeros aleatorios:"); //recebendo números
         System.out.println(Arrays.toString(vet));
 
-        Arrays.sort(vet);
+        Arrays.sort(vet); //Classificando lista de dados. Um inteiro será classificado numericamente em ordem crescente
 
         System.out.println("Numeros ordenados:"); //ordenando números
         System.out.println(Arrays.toString(vet));
