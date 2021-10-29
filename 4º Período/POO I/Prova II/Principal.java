@@ -14,8 +14,8 @@ public class Principal {
         Random numeroRandom = new Random(); //Produz estes números em resposta a solicitações
         int[] vet = new int[10]; //array de inteiros de tamanho 10
 
-        for(i=0; i<vet.length; i++){ //Preenchendo este vetor com números aleatórios
-            vet[i]=numeroRandom.nextInt(1000); 
+        for(i=0; i<vet.length; i++){ //Preenchendo este vetor de comprimento máximo 10 com números aleatórios
+            vet[i]=numeroRandom.nextInt(1000); //obter o próximo valor inteiro aleatório da sequência deste gerador de número aleatório
         }
 
         System.out.println("Numeros aleatorios:"); //recebendo números
