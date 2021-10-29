@@ -27,11 +27,11 @@ public class Testa {
         do {
             System.out.println("--MENU--"); //menu para interagir com a loja
             System.out.println("0 - Sair");
-            System.out.println("1 - Adicionar Produto:");
-            System.out.println("2 - Mostrar Quantidade de Produtos:");
-            System.out.println("3 - Buscar Quantidade de um Produto:");
-            System.out.println("4 - Mostrar Produtos abaixo do minimo:");
-            System.out.println("5 - Mostrar Total de Produtos:");
+            System.out.println("1 - Adicionar Produto");
+            System.out.println("2 - Mostrar Quantidade de Produtos");
+            System.out.println("3 - Buscar Quantidade de um Produto");
+            System.out.println("4 - Mostrar Produtos abaixo do minimo");
+            System.out.println("5 - Mostrar Total de Produtos");
             opcao = input.nextInt();
             switch (opcao) {
             case 0:
@@ -49,10 +49,10 @@ public class Testa {
                 Produto produto = new Produto(nome, qtdeMinima, qtdeAtual);
                 loja.adicionarProduto(produto);
                 break;
-            case 2: //Mostra todos produtos com as respectivas quantidades;
+            case 2: //Mostra todos produtos com as respectivas quantidades
                 System.out.println("Quantidade de Produtos: "+loja.mostraQuantidadeProdutos());
                 break;
-            case 3: //Mostra a quantidade de um produto específico;
+            case 3: //Mostra a quantidade de um produto específico
                 input.nextLine();
                 System.out.print("Informe o nome do Produto: ");
                 nome = input.nextLine();
