@@ -63,5 +63,13 @@ public class Animal {
         this.ambiente = ambiente;
     }
 
+    @Override
+    public String toString() {
+      return "\nNome:"+getNome()+
+      "\nComprimento:"+getComprimento()+
+      "\nNumero de Patas:"+getNumpatas()+
+      "\nCor:"+getCor()+
+      "\nAmbiente:"+getAmbiente()+
+      "\nVelocidade Media:"+getVelmedia();
     
 }
