@@ -10,19 +10,20 @@ informando os dados do animal.
 public class Animal {
 
     private String nome;
-    private int numpatas;
     private float comprimento;
-    private float velmedia;
+    private int numPatas;
     private String cor;
     private String ambiente;
+    private double velMedia;
     private String som;
 
-    public Animal (String nome, int numpatas, float comprimento, float velmedia, String cor, String ambiente, String som){
+    public Animal(String nome, float comprimento, int numPatas, String cor, String ambiente, double velMedia,String som) {
         this.nome = nome;
         this.comprimento = comprimento;
-        this.velmedia = velmedia;
+        this.numPatas = numPatas;
         this.cor = cor;
         this.ambiente = ambiente;
+        this.velMedia = velMedia;
         this.som = som;
     }
 
@@ -34,14 +35,6 @@ public class Animal {
         this.nome = nome;
     }
 
-    public int getNumpatas() {
-        return numpatas;
-    }
-
-    public void setNumpatas(int numpatas) {
-        this.numpatas = numpatas;
-    }
-
     public float getComprimento() {
         return comprimento;
     }
@@ -50,12 +43,12 @@ public class Animal {
         this.comprimento = comprimento;
     }
 
-    public float getVelmedia() {
-        return velmedia;
+    public int getNumPatas() {
+        return numPatas;
     }
 
-    public void setVelmedia(float velmedia) {
-        this.velmedia = velmedia;
+    public void setNumPatas(int numPatas) {
+        this.numPatas = numPatas;
     }
 
     public String getCor() {
@@ -74,6 +67,14 @@ public class Animal {
         this.ambiente = ambiente;
     }
 
+    public double getVelocidadeMedia() {
+        return velMedia;
+    }
+
+    public void setVelocidadeMedia(double velocidadeMedia) {
+        this.velMedia = velocidadeMedia;
+    }
+
     public String getSom() {
         return som;
     }
@@ -82,18 +83,14 @@ public class Animal {
         this.som = som;
     }
 
-    public String emitirSom(){
-        return "Som:" +getSom(); 
+    public String emitirSom() {
+        return "Som:" + getSom();
     }
 
     @Override
     public String toString() {
-      return "\nNome:"+getNome()+
-      "\nComprimento:"+getComprimento()+
-      "\nNumero de Patas:"+getNumpatas()+
-      "\nCor:"+getCor()+
-      "\nAmbiente:"+getAmbiente()+
-      "\nVelocidade Media:"+getVelmedia();
+        return "Animal [ambiente=" + ambiente + ", comprimento=" + comprimento + ", cor=" + cor + ", nome=" + nome
+        + ", numPatas=" + numPatas + ", velocidadeMedia=" + velMedia + "]";
     }
     
 }

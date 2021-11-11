@@ -6,35 +6,36 @@ na tela uma espécie de relatório informando os dados do mamifero (incluindo os
 */
 
 public class Mamifero extends Animal {
-    
+
     private String alimento;
 
-    public Mamifero(String nome, int numpatas, float comprimento, float velmedia, String cor, String ambiente, String alimento, String som) {
-        super(nome, numpatas, comprimento, velmedia, cor, ambiente, som);
+    public Mamifero(String nome, float comprimento, int numPatas, String cor, String ambiente, double velMedia, String som, String alimento) {
+        super(nome, comprimento, numPatas, cor, ambiente, velMedia, som);
         this.alimento = alimento;
     }
-    
-    public void setAlimento(String Alimento) {
-        this.alimento = Alimento;
-    }
-    
+
     public String getAlimento() {
         return alimento;
+    }
+
+    public void setAlimento(String alimento) {
+        this.alimento = alimento;
     }
 
     @Override
     public String emitirSom(){
         return "Som:" +getSom(); 
     }
-        
+    
     public String dadosMamifero(){
-        return  "Nome: " +getNome()+
-        "\nNumero de Patas: " +getNumpatas()+
-        "\nComprimento: " +getComprimento()+
-        "\nVelocidade Media: " +getVelmedia()+
-        "\nCor: " +getCor()+
-        "\nAmbiente: " +getAmbiente()+
-        "\nAlimento: " +getAlimento();
+        return  "Nome:" +getNome() +
+                "\nComprimento:" + getComprimento() +
+                "\nCor: " + getCor() +
+                "\nAmbiente:"+ getAmbiente() +
+                "\nVelocidade Media:"+ getVelocidadeMedia() +
+                "\nAlimento:" +getAlimento()+
+                "\nNumero de Patas: "+ getNumPatas();
+                
     }
     
 }

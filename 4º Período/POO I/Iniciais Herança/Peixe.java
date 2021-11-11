@@ -6,21 +6,21 @@ crie um método dadosPeixe sem parâmetro e do tipo void, que, quando chamado, i
 de relatório informando os dados do peixe (incluindo os dados do Animal e mais a característica).
  */
 
-public class Peixe extends Animal{
+public class Peixe extends Animal {
 
     private String caracteristicas;
 
-    public Peixe (String nome, int numpatas, float comprimento, float velmedia, String cor, String ambiente, String som){
-        super(nome, numpatas, comprimento, velmedia, cor, ambiente, som);
+    public Peixe(String nome, float comprimento, int numPatas, String cor, String ambiente, double velMedia,String som, String caracteristica) {
+        super(nome, comprimento, numPatas, cor, ambiente, velMedia, som);
         this.caracteristicas = caracteristicas;
     }
 
-    public String getCaracteriticas(){
+    public String getCaracteristicas() {
         return caracteristicas;
     }
 
-    public void setCaracteristicas(String caracteristicas) {
-        this.caracteristicas = caracteristicas;
+    public void setCaracteristicas(String caracteristica) {
+        this.caracteristicas = caracteristica;
     }
     
     @Override
@@ -29,13 +29,14 @@ public class Peixe extends Animal{
     }
 
     public String dadosPeixe(){
-        return  "Nome: " +getNome()+
-                "\nNumero de Patas: " +getNumpatas()+
-                "\nComprimento: " +getComprimento()+
-                "\nVelocidade Media: " +getVelmedia()+
-                "\nCor: " +getCor()+
-                "\nAmbiente: " +getAmbiente()+
-                "\nCaracteristica:" +getCaracteriticas();
+        return  "Nome:" +getNome() +
+                "\nComprimento:" + getComprimento() +
+                "\nCor: " + getCor() +
+                "\nAmbiente:"+ getAmbiente() +
+                "\nVelocidade Media:"+ getVelocidadeMedia() +
+                "\nCaracteristica:" +getCaracteristicas()+
+                "\nNumero de Patas: "+ getNumPatas();
+                
     }
-
+    
 }
