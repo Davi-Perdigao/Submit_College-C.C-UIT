@@ -9,8 +9,8 @@ public class Mamifero extends Animal {
     
     private String alimento;
 
-    public Mamifero(String nome, int numpatas, float comprimento, float velmedia, String cor, String ambiente, String alimento) {
-        super(nome, numpatas, comprimento, velmedia, cor, ambiente);
+    public Mamifero(String nome, int numpatas, float comprimento, float velmedia, String cor, String ambiente, String alimento, String som) {
+        super(nome, numpatas, comprimento, velmedia, cor, ambiente, som);
         this.alimento = alimento;
     }
     
@@ -21,17 +21,20 @@ public class Mamifero extends Animal {
     public String getAlimento() {
         return alimento;
     }
+
+    @Override
+    public String emitirSom(){
+        return "Som:" +getSom(); 
+    }
         
     public String dadosMamifero(){
         return  "Nome: " +getNome()+
-        "/nNumero de Patas: " +getNumpatas()+
-        "/nComprimento: " +getComprimento()+
-        "/nVelocidade Media: " +getVelmedia()+
-        "/nCor: " +getCor()+
-        "/nAmbiente: " +getAmbiente()+
-        "/nCaracterística: " +getAlimento();
+        "\nNumero de Patas: " +getNumpatas()+
+        "\nComprimento: " +getComprimento()+
+        "\nVelocidade Media: " +getVelmedia()+
+        "\nCor: " +getCor()+
+        "\nAmbiente: " +getAmbiente()+
+        "\nAlimento: " +getAlimento();
     }
     
-    
 }
-

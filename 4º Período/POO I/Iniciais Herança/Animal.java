@@ -15,16 +15,15 @@ public class Animal {
     private float velmedia;
     private String cor;
     private String ambiente;
+    private String som;
 
-    public Animal (String nome, int numpatas, float comprimento, float velmedia, String cor, String ambiente){
+    public Animal (String nome, int numpatas, float comprimento, float velmedia, String cor, String ambiente, String som){
         this.nome = nome;
         this.comprimento = comprimento;
         this.velmedia = velmedia;
         this.cor = cor;
         this.ambiente = ambiente;
-    }
-
-    public Animal(String nome2, Float comprimento2, Integer nPatas, String cor2, String ambiente2, Float vMedia) {
+        this.som = som;
     }
 
     public String getNome() {
@@ -73,6 +72,18 @@ public class Animal {
 
     public void setAmbiente(String ambiente) {
         this.ambiente = ambiente;
+    }
+
+    public String getSom() {
+        return som;
+    }
+
+    public void setSom(String som) {
+        this.som = som;
+    }
+
+    public String emitirSom(){
+        return "Som:" +getSom(); 
     }
 
     @Override

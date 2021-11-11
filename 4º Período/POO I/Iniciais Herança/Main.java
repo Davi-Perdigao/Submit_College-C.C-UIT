@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 /*
 Crie uma classe TestarAnimais possua um método main para testar as classes criadas.
 Crie um objeto camelo do tipo Mamífero e atribua os seguintes valores para seus atributos:  
@@ -14,29 +12,20 @@ que herda desta classe.
 */
 
 public class Main {
-    public static void main(String args[]) {
-        Scanner input = new Scanner(System.in);
     
-        System.out.println("Nome:");
-        String nome = input.nextLine();
-        System.out.println("Comprimento:");
-        Float comprimento = input.nextFloat();
-        input.nextLine();
-        System.out.println("Numero de Patas:");
-        Integer numpatas = input.nextInt();
-        input.nextLine();
-        System.out.println("Cor:");
-        String cor = input.nextLine();
-        input.nextLine();
-        System.out.println("Ambiente:");
-        String ambiente = input.nextLine();
-        System.out.println("Velocidade Media:");
-        Float velmedia = input.nextFloat();
-        input.nextLine();
-    
-        Animal animal = new Animal(nome, comprimento, numpatas, cor, ambiente, velmedia);
-    
-        System.out.println(animal.toString());
-    
+    public static void Main(String[] args){
+
+        Mamifero camelo = new Mamifero("Camelo", 150 , 4 , "Amarelo" , "Terra" , 2, "nhame nhame");
+        Peixe tubarao = new Peixe("Tubarão", 300 , 0 , "Cinzento" , "Mar" , 1.5 ,"tam tam tam tam","Barbatanas e cauda"); 
+        Mamifero urso = new Mamifero("Urso-do-canadá", 180 , 4 , "Vermelho" , "Terra" , 0.5, "uaaar","Mel");
+
+        System.out.println(camelo.dadosMamifero());
+        System.out.println(camelo.emitirSom());
+
+        System.out.println("\n"+tubarao.dadosPeixe());
+        System.out.println(tubarao.emitirSom());
+
+        System.out.println("\n"+urso.dadosMamifero());
+        System.out.println(urso.emitirSom());
     }
 }
