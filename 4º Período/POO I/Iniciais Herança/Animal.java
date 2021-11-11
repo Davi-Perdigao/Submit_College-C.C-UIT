@@ -1,3 +1,12 @@
+/*Crie uma classe Animal que obedeça à seguinte descrição:
+possua os atributos nome (String), comprimento (float), número de patas (int), cor (String), 
+ambiente (String) e velocidade média (float). Crie um método construtor que receba por parâmetro 
+os valores iniciais de cada um dos atributos e atribua-os aos seus respectivos atributos. 
+Crie os métodos get e set para cada um dos atributos. 
+Sobreescreve o metodo toString(), que, quando chamado, imprime na tela uma espécie de relatório 
+informando os dados do animal. 
+*/
+
 public class Animal {
 
     private String nome;
@@ -13,6 +22,9 @@ public class Animal {
         this.velmedia = velmedia;
         this.cor = cor;
         this.ambiente = ambiente;
+    }
+
+    public Animal(String nome2, Float comprimento2, Integer nPatas, String cor2, String ambiente2, Float vMedia) {
     }
 
     public String getNome() {
@@ -71,5 +83,6 @@ public class Animal {
       "\nCor:"+getCor()+
       "\nAmbiente:"+getAmbiente()+
       "\nVelocidade Media:"+getVelmedia();
+    }
     
 }
