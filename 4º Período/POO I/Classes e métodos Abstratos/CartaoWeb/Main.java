@@ -1,4 +1,4 @@
-/*/Escreva uma classe abstrata chamada CartaoWeb. Essa classe representa todos 
+/*Escreva uma classe abstrata chamada CartaoWeb. Essa classe representa todos 
 os tipos de cartões web e conterá apenas um atributo: destinatario (tipo String). 
 Nessa classe você deverá também declarar o método public abstract void showMessage(). 
 Crie classes filhas da classe CartaoWeb: DiaDosNamorados, Natal, Aniversario. Cada uma 
