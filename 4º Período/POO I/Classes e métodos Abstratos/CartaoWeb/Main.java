@@ -10,6 +10,25 @@ Após, use um laço for para exibir as mensagens deste cartão chamando o métod
 que linha(s) acontece polimorfismo nesse código?
 */
 
+import java.util.ArrayList;
+
 public class Main {
-    
+
+	public static void main(String[] args) {
+		ArrayList<CartaoWeb> cartoes = new ArrayList<>();
+		
+		CartaoWeb aniversario = new Aniversario(" Davi!");
+		CartaoWeb natal = new Natal(" Vovô!");
+		CartaoWeb DiaDosNamorados = new DiadosNamorados(" Ventura!");
+		
+		cartoes.add(aniversario);
+		cartoes.add(natal);
+		cartoes.add(DiaDosNamorados);
+		
+		for(CartaoWeb x: cartoes) {
+			System.out.println(x.showMessage());
+		}
+
+	}
+
 }
