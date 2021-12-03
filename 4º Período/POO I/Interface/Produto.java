@@ -1,7 +1,7 @@
-/**
- * Crie uma classe produto que possui os atributos(propriedades): nome, valor.
- * Implemente os métodos getters e setters.
- */
+/*
+Crie uma classe produto que possui os atributos(propriedades): nome, valor.
+Implemente os métodos getters e setters.
+*/
 
 public class Produto {
     private String nome;
