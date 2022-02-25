@@ -1,47 +1,37 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
-
         Scanner entrada = new Scanner(System.in);
-        int qtdCasos = entrada.nextInt();
+        int qtd = 0;
+        char[] alfabeto = new char []{'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'};
+
+        int count = entrada.nextInt();
         entrada.nextLine();
-        String[] novasPalavras = new String[qtdCasos];
+        int qtdVoltar = entrada.nextInt();
+        entrada.nextLine();
+        while(qtd<count){
+            String nome = entrada.nextLine();
+            char[] newPalavra = nome.toCharArray();
 
-        for (int i = 0; i < qtdCasos; i++) {
-            String mens = entrada.nextLine();
-            int chave = entrada.nextInt();
-            entrada.nextLine();
+            for(int i=0;i<newPalavra.length;i++){
+                for (int j=0;j<alfabeto.length;j++){
+                    if (newPalavra[i] == alfabeto[j]){
+                        if ((j - qtdVoltar)<0){
+                            int aux = qtdVoltar - j;
+                            System.out.println("N" + aux);
+                            newPalavra[i] = alfabeto[alfabeto.length - aux];
 
-            for (int j = 0; j < mens.length(); j++) {
-                if (mens.charAt(j) >= 65 && mens.charAt(j) <= 90) {
-                    if (mens.charAt(j) + chave > 90) {
-                        if (j == 0) {
-                            char x = (char) (mens.charAt(j) + chave);
-                            char y = (char) (x - 90);
-                            char letra = (char) (64 + y);
-                            String letraConvertida1 = Character.toString(letra);
-                            novasPalavras[i] = letraConvertida1;
-                        } else {
-                            char x = (char) (mens.charAt(j) + chave);
-                            char y = (char) (x - 90);
-                            char letra = (char) (64 + y);
-                            novasPalavras[i] += letra;
-                        }
-                    } else {
-                        char letra = (char) (mens.charAt(j) + chave);
-                        if (j == 0) {
-                            String letraConvertida = Character.toString(letra);
-                            novasPalavras[i] = letraConvertida;
-                        } else {
-                            novasPalavras[i] += letra;
+                        }else{
+                            newPalavra[i] = alfabeto [j-qtdVoltar];
                         }
                     }
                 }
             }
-        }
-        for (int it = 0; it < qtdCasos; it++) {
-            System.out.println(novasPalavras[it]);
+            for(char c : newPalavra){
+                System.out.println(c);
+            }
+            System.out.println();
+            qtd++;
         }
     }
 }
