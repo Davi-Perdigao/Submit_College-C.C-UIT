@@ -35,5 +35,5 @@
 
 ## Quinto Período
 
-- [Algorítmos em Grafos](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/4%C2%BA%20Per%C3%ADodo/Algoritmos%20em%20Grafos)
+- [Ciência dos Dados](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/5%C2%B0%20Per%C3%ADodo/Ci%C3%AAncia%20dos%20Dados)
 
