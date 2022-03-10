@@ -1,6 +1,6 @@
 n1 = int(input())
-op = input()
 n2 = int(input())
+op = input()
 
 if (op == "+"):
     result = n1 + n2
