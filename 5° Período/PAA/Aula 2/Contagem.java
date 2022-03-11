@@ -25,9 +25,6 @@ public class Contagem {
         for (int i = 0; i < vetor.length; i++) {
             vetor[i] = vetor.length - i;
         }
-        for (int i = vetor.length - 1; i >= 0; i--) {
-            vetor[(vetor.length - 1) - i] = i + 1;
-        }
     }
 
     public void Aleatorio(int semente) {
@@ -38,7 +35,7 @@ public class Contagem {
         }
     }
 
-    public int Sequencial(){
+    public int Sequencial(int j){
         for(int i=0;i<vetor.length;i++){
             if(vetor[i] == 78) {
                 return i;
@@ -89,4 +86,7 @@ public class Contagem {
         }
     }
     
+    public int getQtdComparacoes() {
+        return this.Comparacoes;
+    }
 }
