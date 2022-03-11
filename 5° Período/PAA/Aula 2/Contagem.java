@@ -93,6 +93,6 @@ public class Contagem {
     }
 
     public void Binaria(int i, int j) {
+        
     }
-
 }
