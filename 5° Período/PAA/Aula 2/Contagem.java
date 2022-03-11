@@ -35,9 +35,11 @@ public class Contagem {
         }
     }
 
-    public int Sequencial(int j){
-        for(int i=0;i<vetor.length;i++){
-            if(vetor[i] == 78) {
+    public int Sequencial(int j) {
+        this.Comparacoes = 0;
+        for (int i = 0; i < vetor.length; i++) {
+            Comparacoes++;
+            if (vetor[i] == 78) {
                 return i;
             }
         }
@@ -80,13 +82,17 @@ public class Contagem {
         return -1;
     }
 
-    public void MostrarArray(){
-        for(int i=0;i<vetor.length;i++){
+    public void MostrarArray() {
+        for (int i = 0; i < vetor.length; i++) {
             System.out.print(vetor);
         }
     }
-    
-    public int getQtdComparacoes() {
+
+    public int getComparacoes() {
         return this.Comparacoes;
     }
+
+    public void Binaria(int i, int j) {
+    }
+
 }
