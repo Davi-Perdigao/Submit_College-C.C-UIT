@@ -42,7 +42,7 @@ public class Main {
                 Double diff = (termino.doubleValue() - inicio.doubleValue()) / 1000000;
                 System.out.print("Tempo: " + diff);
                 int qtdComparacoes = cont.getComparacoes();
-                System.out.print("Comparacoes: " + qtdComparacoes);
+                System.out.print("\nComparacoes: " + qtdComparacoes);
             } else if (opcao2 == 2) {
                 Long inicio = System.nanoTime();
                 cont.Binaria(0, tamanho - 1);
