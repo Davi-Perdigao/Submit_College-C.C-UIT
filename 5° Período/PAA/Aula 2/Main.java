@@ -7,36 +7,41 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner entrada = new Scanner(System.in);
-        int tamanho = entrada.nextInt();
-        Contagem cont = new Contagem(tamanho);
-    }
+        try (Scanner entrada = new Scanner(System.in)) {
+            System.out.println("Escolha o tamanho do Vetor: ");
+            int tamanho = entrada.nextInt();
+            Contagem cont = new Contagem(tamanho);
 
-    System.out.println("Como deseja preencher seu vetor?\n");
-    System.out.println("Digite 1 para ordernar de forma Crescente\n");
-    System.out.println("Digite 2 para ordernar de forma Decrescente\n");
-    System.out.println("Digite 3 para ordernar de forma Aleatoria\n");
-    int opcao = entrada.nextInt();
+            System.out.println("\n---PREENCHIMENTO DO VETOR---\n");
+            System.out.println("1 - Crescente");
+            System.out.println("2 - Decrescente");
+            System.out.println("3 - Aleatoria\n");
 
-    if (opcao == 1) {
-        cont.Crescente();
-    } else if (opcao == 2) {
-        cont.Descrescente();
-    } else if (opcao == 3) {
-        cont.Aleatorio(3);
-    }
-       
-    System.out.println("Selecione o tipo de busca");
-    System.out.println("Digite 1 para Sequencial");
-    System.out.println("Digite 2 para Binaria");
-    int opcao2 = entrada.nextInt();
+            int opcao = entrada.nextInt();
 
-    if(opcao2 == 1){
-        cont.buscaSequencial();
-    }else if(opcao2 == 2){
-        cont.buscaBinaria();
+            if (opcao == 1) {
+                cont.Crescente();
+            } else if (opcao == 2) {
+                cont.Decrescente();
+            } else if (opcao == 3) {
+                cont.Aleatorio(3);
+            }
+
+            System.out.println("\n---TIPO DA BUSCA---\n");
+            System.out.println("1 - Sequencial");
+            System.out.println("2 - Binaria Crescente");
+            System.out.println("3 - Binaria Decrescente");
+
+            int opcao2 = entrada.nextInt();
+
+            if (opcao2 == 1) {
+                cont.Sequencial();
+            } else if (opcao2 == 2) {
+                cont.BinariaCrescente(opcao2);
+            } else if (opcao2 == 3){
+                cont.BinariaDecrescente(opcao2);
+            }
+        }
+        
     }
-        entrada.close();
-    }
-    
 }

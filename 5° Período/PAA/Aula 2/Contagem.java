@@ -6,7 +6,6 @@ Obs: No método aleatório, utilizar a função de setar a semente antes do laç
 dos exercícios sejam os mesmos para todos alunos.*/
 
 import java.util.Random;
-import java.util.Scanner;
 
 public class Contagem {
     private int vetor[];
@@ -23,8 +22,11 @@ public class Contagem {
     }
 
     public void Decrescente() {
-        for(int i = vetor.length-1;i>=0;i--){
-            vetor[i] = input.nextInt();
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = vetor.length - i;
+        }
+        for (int i = vetor.length - 1; i >= 0; i--) {
+            vetor[(vetor.length - 1) - i] = i + 1;
         }
     }
 
@@ -37,7 +39,7 @@ public class Contagem {
     }
 
     public int Sequencial(){
-        for(int i=0;i<array.length;i++){
+        for(int i=0;i<vetor.length;i++){
             if(vetor[i] == 78) {
                 return i;
             }
@@ -86,4 +88,5 @@ public class Contagem {
             System.out.print(vetor);
         }
     }
+    
 }
