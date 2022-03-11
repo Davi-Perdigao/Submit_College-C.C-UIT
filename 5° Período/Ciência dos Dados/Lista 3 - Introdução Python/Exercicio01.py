@@ -1,3 +1,15 @@
+'''No mesmo script, escreva funções que realizem as instruções a seguir. No programa
+principal, escreva um menu que permita ao usuário escolher entre as funções. Retorne ao
+menu principal ao final de cada execução. Inclua uma opção “Sair” no seu menu, e encerre o
+programa somente quando o usuário selecionar essa opção.
+• primo(x): Recebe um inteiro e imprime se ele é primo ou não.
+• mmc(x, y): Recebe dois inteiros e calcula o mínimo múltiplo comum (MMC) entre eles
+• soma_digitos(x): Recebe um valor inteiro de qualquer tamanho e imprime a soma dos
+seus dígitos. Note que sua solução deve ser aritmética, não serão aceitas soluções com
+strings.
+• nesimo_primo(n): Recebe um inteiro n e imprime qual o n-ésimo valor primo
+existente.'''
+
 def mmc(n1,n2):
     if n1 > n2:
         maior = n1
