@@ -3,8 +3,6 @@ de cada um dos valores. Os valores serão digitados em uma única linha, use man
 string para criar uma lista. Use compreensão de lista para converter os valores para inteiro e
 calcular o seu quadrado.'''
 
-lista = [1, 2, 5, 7, 11, 13]
-quadrado = []
-for n in lista:
-    quadrado.append(n**2)
-print (quadrado)
+listaOriginal = ['1', '2', '3', '4', '5', '6']
+quadrado = [int(i) ** 2 for i in listaOriginal]
+print(quadrado)
