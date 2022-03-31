@@ -4,9 +4,9 @@ complexos os espaços e pontuação são ignorados. A frase SUBI NO ONIBUS é o 
 uma frase palíndroma onde os espaços foram ignorados. Faça um programa que leia uma
 sequência de caracteres, mostre−a e diga se é um palíndromo ou não.'''
 
-expressao = input("Informe uma palavra ou expressão: \n").upper().replace(' ', '')
-eInvertida = expressao[::-1]
-if expressao == eInvertida:
+terminal = input("Informe uma palavra ou expressão: \n").upper().replace(' ', '')
+invertida = terminal[::-1]
+if terminal == invertida:
     print("É palíndromo")
 else:
     print("Não é um palíndromo")
