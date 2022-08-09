@@ -43,9 +43,9 @@
 
 ## Sexto Período
 
-- [Compiladores](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/5%C2%B0%20Per%C3%ADodo/Ci%C3%AAncia%20dos%20Dados)
-- [Inteligência Artificial](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/5%C2%B0%20Per%C3%ADodo/Engenharia%20de%20Software%20II)
-- [Linguagens de Programação](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/5%C2%B0%20Per%C3%ADodo/FTC)
-- [Redes de Computadores I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/5%C2%B0%20Per%C3%ADodo/PAA)
-- [UI Design](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/5%C2%B0%20Per%C3%ADodo/Sistemas%20Operacionais)
+- [Compiladores](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Compiladores)
+- [Inteligência Artificial](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Intelig%C3%AAncia%20Artificial)
+- [Linguagens de Programação](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Linguagens%20de%20Programa%C3%A7%C3%A3o)
+- [Redes de Computadores I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Redes%20de%20Computadores%20I)
+- [UI Design](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/UI%20Design)
 
