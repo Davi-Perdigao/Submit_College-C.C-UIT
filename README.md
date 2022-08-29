@@ -47,5 +47,5 @@
 - [Inteligência Artificial](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Intelig%C3%AAncia%20Artificial)
 - [Linguagens de Programação](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Linguagens%20de%20Programa%C3%A7%C3%A3o)
 - [Redes de Computadores I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Redes%20de%20Computadores%20I)
-- [UI/UX Design](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/UI%20Design)
+- [UI/UX Design](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/UI%20UX%20Design)
 
