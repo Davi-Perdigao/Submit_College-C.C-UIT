@@ -1,4 +1,4 @@
-## CIÊNCIA DA COMPUTAÇÃO - UNIVERSIDADE DE ITAÚNA (UIT)abcdefghijklm
+## CIÊNCIA DA COMPUTAÇÃO - UNIVERSIDADE DE ITAÚNA (UIT)abcdefghijklmn
 
 ## Primeiro Período
 
