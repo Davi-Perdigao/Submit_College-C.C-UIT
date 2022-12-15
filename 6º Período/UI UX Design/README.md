@@ -1,1 +1,1 @@
-## Repositório Dedicado à Aplicação Desenvolvida ao Longo da Disciplina 💻: [Redesign_GitHub_Mobile](https://github.com/Davi-Perdigao/Redesign_GitHub_Mobile) 
+## Repositório dedicado ao projeto desenvolvido ao decorrer da disciplina, abordando todas as etapas da criação de um projeto utilizando as técnicas de UX/UI Design 💻: [Redesign_GitHub_Mobile](https://github.com/Davi-Perdigao/Redesign_GitHub_Mobile) 
