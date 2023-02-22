@@ -49,3 +49,12 @@
 - [Redes de Computadores I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/Redes%20de%20Computadores%20I)
 - [UI/UX Design](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/6%C2%BA%20Per%C3%ADodo/UI%20UX%20Design)
 
+## Sétimo Período
+
+- [Computação Gráfica](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/7%C2%BA%20Per%C3%ADodo/Computa%C3%A7%C3%A3o%20Gr%C3%A1fica)
+- [Laboratório de Redes](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/7%C2%BA%20Per%C3%ADodo/Lab.%20de%20Redes)
+- [Machine Learning](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/7%C2%BA%20Per%C3%ADodo/Machine%20Learning)
+- [Otimização de Sistemas](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/7%C2%BA%20Per%C3%ADodo/Otimiza%C3%A7%C3%A3o%20de%20Sistemas)
+- [Redes de Computadores II](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/7%C2%BA%20Per%C3%ADodo/Redes%20de%20Computadores%20II)
+- [TCC I](https://github.com/Davi-Perdigao/Submit_College-C.C-UIT/tree/main/7%C2%BA%20Per%C3%ADodo/TCC%20I)
+
