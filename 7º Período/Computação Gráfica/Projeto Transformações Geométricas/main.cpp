@@ -1,12 +1,12 @@
 #include <windows.h>
 #include <gl/glut.h>
 #include <math.h>
-// Vari·veis para controlar a cor dos elementos da paisagem
+// Vari√°veis para controlar a transforma√ß√£o dos elementos da tela
 int mudarRotacao = 0;
 int mudarEscala = 0;
 int mudarPosicao = 0;
 
-// FunÁ„o para reconhecer Inputs do Teclado
+// Fun√ß√£o para reconhecer Inputs do Teclado
 void keyboardInput(unsigned char key, int x, int y){
 	if(key == 27){
 		exit(0);
@@ -43,9 +43,9 @@ void keyboardInput(unsigned char key, int x, int y){
 void Desenha(void) {
   glMatrixMode(GL_MODELVIEW);
   glLoadIdentity();
-  // Limpa a janela de visualizaÁ„o
+  // Limpa a janela de visualiza√ß√£o
   glClear(GL_COLOR_BUFFER_BIT);
-  // Especifica que a cor corrente È vermelha
+  // Especifica que a cor corrente √© vermelha
   // R G B
   glColor3f(1.0f, 0.0f, 0.0f);
   if(mudarRotacao == 1){
@@ -57,7 +57,7 @@ void Desenha(void) {
   if(mudarPosicao == 1){
 	glTranslatef(-50, 40, 0.0);
   }
-  // triangulo com uma cor a partir de cada vÈrtice
+  // triangulo com uma cor a partir de cada v√©rtice
   glBegin(GL_TRIANGLES);
   	glColor3f(1,0,0);
   	glVertex3f(-50, -50, 0);
@@ -70,21 +70,21 @@ void Desenha(void) {
   glFlush();
 }
 
-// Inicializa par‚metros de rendering
+// Inicializa par√¢metros de rendering
 void Inicializa(void) {
-  // Define a cor de fundo da janela de visualizaÁ„o como preta
+  // Define a cor de fundo da janela de visualiza√ß√£o como preta
   glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 }
-// FunÁ„o callback chamada quando o tamanho da janela È alterado
+// Fun√ß√£o callback chamada quando o tamanho da janela √© alterado
 void AlteraTamanhoJanela(GLsizei w, GLsizei h) {
   // Evita a divisao por zero
   if (h == 0) h = 1;
-  // Especifica as dimensıes da Viewport
+  // Especifica as dimens√µes da Viewport
   glViewport(0, 0, w, h);
   // Inicializa o sistema de coordenadas
   glMatrixMode(GL_PROJECTION);
   glLoadIdentity();
-  // Estabelece a janela de seleÁ„o (left, right, bottom, top)
+  // Estabelece a janela de sele√ß√£o (left, right, bottom, top)
   if (w <= h)
     gluOrtho2D(-200.0f, 200.0f, -175.0f, 175.0f * h / w);
   else
