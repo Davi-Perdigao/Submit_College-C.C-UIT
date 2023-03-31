@@ -1,8 +1,8 @@
-// Um programa OpenGL simples que desenha uma paisagem com ch„o, arvorÈ, casa e sol
+// Um programa OpenGL simples que desenha uma paisagem com ch√£o, arvor√©, casa e sol
 #include <windows.h>
 #include <gl/glut.h>
 #include <math.h>
-// Vari·veis para controlar a cor dos elementos da paisagem
+// Vari√°veis para controlar a cor dos elementos da paisagem
 int mudarChao = 0;
 int mudarCeu = 0;
 int mudarFolhaArvore = 0;
@@ -10,7 +10,7 @@ int mudarTelhadoTronco = 0;
 int mudarPorta = 0;
 int mudarEstrutura = 0;
 int mudarSol = 0;
-// FunÁ„o para reconhecer Inputs do Mouse
+// Fun√ß√£o para reconhecer Inputs do Teclado
 void keyboardInput(unsigned char key, int x, int y){
 	if(key == 27){
 		exit(0);
@@ -79,7 +79,7 @@ void keyboardInput(unsigned char key, int x, int y){
 		glutPostRedisplay();
 	}
 }
-// FunÁ„o callback chamada para fazer o desenho
+// Fun√ß√£o callback chamada para fazer o desenho
 void DesenhaCirculo(float cx, float cy, float r, int num_segmentos)
 {
 	if(mudarSol == 1){
@@ -88,16 +88,16 @@ void DesenhaCirculo(float cx, float cy, float r, int num_segmentos)
 	else{
 		glColor3f(1.0f, 0.8f, 0);
 	}
-	glBegin(GL_LINE_LOOP); // desenha o cÌrculo
+	glBegin(GL_LINE_LOOP); // desenha o c√≠rculo
 	for(int ii = 0; ii < num_segmentos; ii++)
 	{
 		float theta = 2.0f * 3.1415926f * float(ii) / float(num_segmentos);
 		float x = r * cosf(theta); //calcular o componente x
 		float y = r * sinf(theta); //calcular o componente y
-		glVertex2f(x + cx, y + cy); //vertices de saÌda
+		glVertex2f(x + cx, y + cy); //vertices de sa√≠da
 	}
 	glEnd();
-	glBegin(GL_POLYGON); // preenche o cÌrculo
+	glBegin(GL_POLYGON); // preenche o c√≠rculo
 	for (int i = 0; i < 360; i++) 
 	{
 		float angle_theta = i * 3.142 / 180;
@@ -114,16 +114,16 @@ void DesenhaCirculoArvore(float cx, float cy, float r, int num_segmentos)
 	else{
 		glColor3f(0, 0.6f, 0.3f);
 	}
-	glBegin(GL_LINE_LOOP); // desenha o cÌrculo
+	glBegin(GL_LINE_LOOP); // desenha o c√≠rculo
 	for(int ii = 0; ii < num_segmentos; ii++)
 	{
 		float theta = 2.0f * 3.1415926f * float(ii) / float(num_segmentos);
 		float x = r * cosf(theta); //calcular o componente x
 		float y = r * sinf(theta); //calculate o componente y
-		glVertex2f(x + cx, y + cy); //vertices de saÌda
+		glVertex2f(x + cx, y + cy); //vertices de sa√≠da
 	}
 	glEnd();
-	glBegin(GL_POLYGON); // preenche o cÌrculo
+	glBegin(GL_POLYGON); // preenche o c√≠rculo
 	for (int i = 0; i < 360; i++) 
 	{
 		float angle_theta = i * 3.142 / 180;
@@ -136,11 +136,11 @@ void Desenha(void)
 {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	// Limpa a janela de visualizaÁ„o
+	// Limpa a janela de visualiza√ß√£o
 	glClear(GL_COLOR_BUFFER_BIT);
-	// Especifica que a cor corrente È vermelha
+	// Especifica que a cor corrente √© vermelha
 	// R G B
-	// Desenha um quadrado para o cÈu
+	// Desenha um quadrado para o c√©u
 	if(mudarCeu == 1){
 		glColor3f(0, 0, 0);
 	}
@@ -153,7 +153,7 @@ void Desenha(void)
 		glVertex2i(0,400);
 		glVertex2i(480,400);
 	glEnd();
-	// Desenha um quadrado para o ch„o
+	// Desenha um quadrado para o ch√£o
 	if(mudarChao == 1){
 		glColor3f(1.0f, 0, 0);
 	}
@@ -166,7 +166,7 @@ void Desenha(void)
 		glVertex2i(480,0);
 		glVertex2i(480,120);
 	glEnd();
-	// Desenha um quadrado para o tronco da ·rvore
+	// Desenha um quadrado para o tronco da √°rvore
 	if(mudarTelhadoTronco == 1){
 		glColor3f(1.0f, 0, 0);
 	}
@@ -192,7 +192,7 @@ void Desenha(void)
 		glVertex2i(215,170);
 		glVertex2i(160,170);
 	glEnd();
-	// Desenha um quadrado para o telhado da casa e transforma-o em tri‚ngulo
+	// Desenha um quadrado para o telhado da casa e transforma-o em tri√¢ngulo
 	if(mudarTelhadoTronco == 1){
 		glColor3f(1.0f, 0, 0);
 	}
@@ -262,23 +262,23 @@ void Desenha(void)
 	glFlush();
 }
 
-// Inicializa par‚metros de rendering
+// Inicializa par√¢metros de rendering
 void Inicializa (void)
 {
-	// Define a cor de fundo da janela de visualizaÁ„o como preta
+	// Define a cor de fundo da janela de visualiza√ß√£o como preta
 	glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
 }
-// FunÁ„o callback chamada quando o tamanho da janela È alterado
+// Fun√ß√£o callback chamada quando o tamanho da janela √© alterado
 void AlteraTamanhoJanela(GLsizei w, GLsizei h)
 {
 	// Evita a divisao por zero
 	if(h == 0) h = 1;
-	// Especifica as dimensıes da Viewport
+	// Especifica as dimens√µes da Viewport
 	glViewport(0, 0, w, h);
 	// Inicializa o sistema de coordenadas
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	// Estabelece a janela de seleÁ„o (left, right, bottom, top)
+	// Estabelece a janela de sele√ß√£o (left, right, bottom, top)
 	if (w <= h)
 	gluOrtho2D (0.0f, 250.0f, 0.0f, 250.0f*h/w);
 	else
